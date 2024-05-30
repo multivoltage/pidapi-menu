@@ -1,33 +1,24 @@
 import { Show, onCleanup, type Component } from "solid-js";
-import { createStore } from "solid-js/store";
 
 import styles from "./App.module.css";
 
 // screens
 import Screen from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
-import { Lang, MyStore } from "./types";
+import { Lang } from "./types";
 import { AllScrren } from "./screen/allScreen/page";
 import { MapScreens, RESET_TO_LANGUAGE_SELECTOR_TIME } from "./const";
+import { useMyStore } from "./StoreProvider";
 
 const App: Component = () => {
-  // Initialize store
-  const [store, setStore] = createStore<MyStore>({
-    screen: MapScreens["langage-screen"],
-    lang: "it",
-  });
+  const { myStore, setScreen } = useMyStore();
 
   function handleLangSelected(lang: Lang) {
-    setStore({
-      lang,
-      screen: MapScreens["home"],
-    });
+    setScreen(MapScreens["home"]);
   }
 
   const timer = window.setTimeout(() => {
-    setStore({
-      screen: MapScreens["langage-screen"],
-    });
+    setScreen(MapScreens["langage-screen"]);
   }, RESET_TO_LANGUAGE_SELECTOR_TIME);
 
   onCleanup(() => {
@@ -37,25 +28,21 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <Header
-        lang={store.lang}
-        showAllLabelGlutenFree={store.screen.screenName === "langage-screen"}
-        showHome={false}
-        onClickHome={() =>
-          setStore({
-            screen: MapScreens["home"],
-          })
+        showAllLabelGlutenFree={
+          myStore().screen.screenName === "langage-screen"
         }
+        showHome={false}
       />
-      <Show when={store.screen.screenName === "langage-screen"}>
+      <Show when={myStore().screen.screenName === "langage-screen"}>
         <Screen onSelectLang={handleLangSelected} />
       </Show>
 
-      <Show when={store.screen.screenName !== "langage-screen"}>
-        <AllScrren screen={store.screen} />
+      <Show when={myStore().screen.screenName !== "langage-screen"}>
+        <AllScrren screen={myStore().screen} />
       </Show>
 
       {!import.meta.env.PROD && (
-        <div class={styles.debug}>{JSON.stringify(store)}</div>
+        <div class={styles.debug}>{JSON.stringify(myStore())}</div>
       )}
     </div>
   );

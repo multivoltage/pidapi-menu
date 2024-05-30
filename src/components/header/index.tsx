@@ -1,17 +1,19 @@
 import { Show, type Component } from "solid-js";
 import styles from "./header.module.css";
 import { Lang, Screen } from "../../types";
+import { useMyStore } from "../../StoreProvider";
+import { MapScreens } from "../../const";
 
 interface Props {
-  lang: Lang;
   showHome: boolean;
   prev?: Screen["next"];
   next?: Screen["prev"];
   showAllLabelGlutenFree: boolean;
-  onClickHome: () => void;
 }
 
 const Header: Component<Props> = (props) => {
+  const { myStore, setScreen } = useMyStore();
+  const lang = myStore().lang;
   return (
     <header class={styles.container}>
       <div
@@ -19,8 +21,8 @@ const Header: Component<Props> = (props) => {
           flex: 1,
         }}
       >
-        {props.lang === "it" && <button>EN</button>}
-        {props.lang === "en" && <button>IT</button>}
+        {lang === "it" && <button>EN</button>}
+        {lang === "en" && <button>IT</button>}
       </div>
 
       <div
@@ -29,7 +31,7 @@ const Header: Component<Props> = (props) => {
         }}
       >
         <img
-          onClick={props.onClickHome}
+          onClick={() => setScreen(MapScreens.home)}
           src="/icons/icon_home.png"
           width={82}
         />
@@ -47,10 +49,10 @@ const Header: Component<Props> = (props) => {
         </Show>
 
         <Show when={!props.showAllLabelGlutenFree}>
-          <Show when={props.lang === "it"}>
+          <Show when={lang === "it"}>
             <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
           </Show>
-          <Show when={props.lang === "en"}>
+          <Show when={lang === "en"}>
             <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
           </Show>
         </Show>
