@@ -18,5 +18,6 @@ code {
 /** variable **/
 :root {
   --gree-color: rgb(58, 165, 42);
+  --red-color: red;
 }
 /** end variables **/
