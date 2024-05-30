@@ -13,19 +13,14 @@ import { MapScreens } from "./const";
 const App: Component = () => {
   // Initialize store
   const [store, setStore] = createStore<MyStore>({
-    screen: MapScreens["home"],
+    screen: MapScreens["langage-screen"],
     lang: "it",
   });
 
   function handleLangSelected(lang: Lang) {
     setStore({
       lang,
-      screen: {
-        screenName: "home",
-        showHomeIcon: false,
-        title: "home",
-        color: "red",
-      },
+      screen: MapScreens["home"],
     });
   }
 
@@ -43,6 +38,10 @@ const App: Component = () => {
       <Show when={store.screen.screenName !== "langage-screen"}>
         <AllScrren screen={store.screen} />
       </Show>
+
+      {!import.meta.env.PROD && (
+        <div class={styles.debug}>{JSON.stringify(store)}</div>
+      )}
     </div>
   );
 };
