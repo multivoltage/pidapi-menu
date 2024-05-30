@@ -13,20 +13,42 @@ interface Props {
 const Header: Component<Props> = (props) => {
   return (
     <header class={styles.container}>
-      <div>
-        <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-        <br />
-        <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
+        {props.lang === "it" && <button>EN</button>}
+        {props.lang === "en" && <button>IT</button>}
       </div>
 
-      <div>
-        <div class={styles.prev}>
-          <Show when={props.prev}>{"<"}</Show>
-        </div>
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
+        Home
+      </div>
 
-        <div class={styles.next}>
-          <Show when={props.next}>{">"}</Show>
-        </div>
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
+        <Show when={props.showAllLabelGlutenFree}>
+          <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
+          <br />
+          <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
+        </Show>
+
+        <Show when={!props.showAllLabelGlutenFree}>
+          <Show when={props.lang === "it"}>
+            <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
+          </Show>
+          <Show when={props.lang === "en"}>
+            <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
+          </Show>
+        </Show>
       </div>
     </header>
   );
