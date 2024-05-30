@@ -8,16 +8,12 @@ import Screen from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
 import { Lang, MyStore } from "./types";
 import { AllScrren } from "./screen/allScreen/page";
+import { MapScreens } from "./const";
 
 const App: Component = () => {
   // Initialize store
   const [store, setStore] = createStore<MyStore>({
-    screen: {
-      screenName: "langage-screen",
-      showHomeIcon: false,
-      color: "white",
-      title: "",
-    },
+    screen: MapScreens["home"],
     lang: "it",
   });
 
