@@ -1,18 +1,20 @@
-import "solid-slider/slider.css";
 import type { Component } from "solid-js";
 import styles from "./screen.module.css";
-import { createSlider } from "solid-slider";
-import Slider from "../../components/lockScreenSlider";
+import { Lang } from "../../types";
 
-const Scrren: Component = () => {
+interface Props {
+  onSelectLang: (lang: Lang) => void;
+}
+
+const Scrren: Component<Props> = (props) => {
   return (
     <div class={styles.container}>
-      <div class={styles.flag}>
+      <div class={styles.flag} onClick={[props.onSelectLang, "it"]}>
         <img src="/images/bandiera_italiano.png" />
         <span>ITALIANO</span>
       </div>
 
-      <div class={styles.flag}>
+      <div class={styles.flag} onClick={[props.onSelectLang, "en"]}>
         <img src="/images/bandiera_inglese.png" />
         <span>ENGLISH</span>
       </div>
