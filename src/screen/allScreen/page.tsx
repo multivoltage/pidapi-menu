@@ -51,18 +51,15 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
 
       <Show when={props.screen.screenName === "scelta-piada"}>
         <div>
-          <div
-            style={{
-              "font-size": "2rem",
-            }}
-          >
-            <p>PIADA PICCOLA: 1 GUSTO</p>
-            <p>PIADA MEDIA: 2 GUSTI</p>
-            <p>PIADA GRANDE: 3 GUSTI</p>
+          <div>
+            <div>PIADA PICCOLA: 1 GUSTO</div>
+            <div>PIADA MEDIA: 2 GUSTI</div>
+            <div>PIADA GRANDE: 3 GUSTI</div>
           </div>
 
           <div
             style={{
+              "margin-top": "1rem",
               position: "relative",
               width: "90vw",
               height: "60vh",
