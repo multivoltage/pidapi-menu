@@ -4,7 +4,7 @@ import {
   useContext,
   ParentComponent,
 } from "solid-js";
-import { MyStore, Screen } from "./types";
+import { Lang, MyStore, Screen } from "./types";
 import { MapScreens } from "./const";
 
 function useProviderValue() {
@@ -19,7 +19,14 @@ function useProviderValue() {
       lang: myStore().lang,
     }));
   }
-  return { myStore, setScreen };
+
+  function setLang(lang: Lang) {
+    setMyStore(() => ({
+      screen: myStore().screen,
+      lang,
+    }));
+  }
+  return { myStore, setScreen, setLang, setMyStore };
 }
 
 export type ContextType = ReturnType<typeof useProviderValue>;

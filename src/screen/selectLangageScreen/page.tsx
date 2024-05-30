@@ -1,20 +1,34 @@
 import type { Component } from "solid-js";
 import styles from "./screen.module.css";
-import { Lang } from "../../types";
+import { useMyStore } from "../../StoreProvider";
+import { MapScreens } from "../../const";
 
-interface Props {
-  onSelectLang: (lang: Lang) => void;
-}
-
-const Scrren: Component<Props> = (props) => {
+const Screen: Component = () => {
+  const { setMyStore } = useMyStore();
   return (
     <div class={styles.container}>
-      <div class={styles.flag} onClick={[props.onSelectLang, "it"]}>
+      <div
+        class={styles.flag}
+        onClick={() => {
+          setMyStore(() => ({
+            lang: "it",
+            screen: MapScreens["home"],
+          }));
+        }}
+      >
         <img src="/images/bandiera_italiano.png" />
         <span>ITALIANO</span>
       </div>
 
-      <div class={styles.flag} onClick={[props.onSelectLang, "en"]}>
+      <div
+        class={styles.flag}
+        onClick={() => {
+          setMyStore(() => ({
+            lang: "en",
+            screen: MapScreens["home"],
+          }));
+        }}
+      >
         <img src="/images/bandiera_inglese.png" />
         <span>ENGLISH</span>
       </div>
@@ -22,4 +36,4 @@ const Scrren: Component<Props> = (props) => {
   );
 };
 
-export default Scrren;
+export default Screen;

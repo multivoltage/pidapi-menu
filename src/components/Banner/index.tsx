@@ -2,6 +2,7 @@ import { Show, type Component } from "solid-js";
 import styles from "./banner.module.css";
 import { Screen } from "../../types";
 import { useMyStore } from "../../StoreProvider";
+import { MapScreens } from "../../const";
 
 type Props = { width: string; goToScreen?: Screen["screenName"] } & (
   | {
@@ -24,7 +25,9 @@ export const Banner: Component<Props> = (props) => {
       style={{
         width: props.width,
       }}
-      onClick={props.goToScreen ? [setScreen, props.goToScreen] : undefined}
+      onClick={
+        props.goToScreen ? [setScreen, MapScreens[props.goToScreen]] : undefined
+      }
     >
       {props.type === "img" && <img class={styles.image} src={props.url} />}
       {props.type === "text" && (

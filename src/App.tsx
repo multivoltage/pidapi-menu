@@ -3,7 +3,7 @@ import { Show, onCleanup, type Component } from "solid-js";
 import styles from "./App.module.css";
 
 // screens
-import Screen from "./screen/selectLangageScreen/page";
+import ScreenLangSelector from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
 import { Lang } from "./types";
 import { AllScrren } from "./screen/allScreen/page";
@@ -34,7 +34,7 @@ const App: Component = () => {
         showHome={false}
       />
       <Show when={myStore().screen.screenName === "langage-screen"}>
-        <Screen onSelectLang={handleLangSelected} />
+        <ScreenLangSelector />
       </Show>
 
       <Show when={myStore().screen.screenName !== "langage-screen"}>
@@ -42,7 +42,9 @@ const App: Component = () => {
       </Show>
 
       {!import.meta.env.PROD && (
-        <div class={styles.debug}>{JSON.stringify(myStore())}</div>
+        <div class={styles.debug}>
+          <pre>{JSON.stringify(myStore(), null, "\t")}</pre>
+        </div>
       )}
     </div>
   );
