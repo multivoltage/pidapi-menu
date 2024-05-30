@@ -8,6 +8,7 @@ interface Props {
   prev?: Screen["next"];
   next?: Screen["prev"];
   showAllLabelGlutenFree: boolean;
+  onClickHome: () => void;
 }
 
 const Header: Component<Props> = (props) => {
@@ -27,7 +28,11 @@ const Header: Component<Props> = (props) => {
           flex: 1,
         }}
       >
-        Home
+        <img
+          onClick={props.onClickHome}
+          src="/icons/icon_home.png"
+          width={82}
+        />
       </div>
 
       <div

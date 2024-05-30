@@ -1,4 +1,4 @@
-import { Show, type Component } from "solid-js";
+import { Show, onCleanup, type Component } from "solid-js";
 import { createStore } from "solid-js/store";
 
 import styles from "./App.module.css";
@@ -8,7 +8,7 @@ import Screen from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
 import { Lang, MyStore } from "./types";
 import { AllScrren } from "./screen/allScreen/page";
-import { MapScreens } from "./const";
+import { MapScreens, RESET_TO_LANGUAGE_SELECTOR_TIME } from "./const";
 
 const App: Component = () => {
   // Initialize store
@@ -24,12 +24,27 @@ const App: Component = () => {
     });
   }
 
+  const timer = window.setTimeout(() => {
+    setStore({
+      screen: MapScreens["langage-screen"],
+    });
+  }, RESET_TO_LANGUAGE_SELECTOR_TIME);
+
+  onCleanup(() => {
+    window.clearTimeout(timer);
+  });
+
   return (
     <div class={styles.App}>
       <Header
         lang={store.lang}
         showAllLabelGlutenFree={store.screen.screenName === "langage-screen"}
         showHome={false}
+        onClickHome={() =>
+          setStore({
+            screen: MapScreens["home"],
+          })
+        }
       />
       <Show when={store.screen.screenName === "langage-screen"}>
         <Screen onSelectLang={handleLangSelected} />

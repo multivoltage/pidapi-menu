@@ -79,3 +79,5 @@ export const MapScreens: MappingScreens = {
     title: "",
   },
 };
+
+export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
