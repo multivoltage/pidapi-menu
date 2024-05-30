@@ -7,6 +7,7 @@ import styles from "./App.module.css";
 import Screen from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
 import { Lang, MyStore } from "./types";
+import { AllScrren } from "./screen/allScreen/page";
 
 const App: Component = () => {
   // Initialize store
@@ -41,6 +42,10 @@ const App: Component = () => {
       />
       <Show when={store.screen.screenName === "langage-screen"}>
         <Screen onSelectLang={handleLangSelected} />
+      </Show>
+
+      <Show when={store.screen.screenName !== "langage-screen"}>
+        <AllScrren screen={store.screen} />
       </Show>
     </div>
   );
