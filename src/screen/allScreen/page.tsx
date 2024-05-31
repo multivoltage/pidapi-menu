@@ -1,8 +1,13 @@
-import { Show, type Component } from "solid-js";
+import { For, Show, type Component } from "solid-js";
 import styles from "./screen.module.css";
 import { MyStore } from "../../types";
 import { Banner } from "../../components/Banner";
 import { HOME_SCREEN_ASSETS } from "./assets";
+import {
+  AlternateList,
+  Props as AlternateListProps,
+} from "../../components/AlternateList";
+import { ITEMS_PIADA_AFFETTATI } from "../../const";
 
 const banner1 = HOME_SCREEN_ASSETS[0];
 const banner2 = HOME_SCREEN_ASSETS[1];
@@ -131,6 +136,29 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               />
             </div>
           </div>
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "piada-affettati"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          AFFETTATI
+        </div>
+        <div
+          style={{
+            overflow: "auto",
+            "max-height": "100%",
+          }}
+        >
+          <AlternateList
+            bannerWidth="20%"
+            list={ITEMS_PIADA_AFFETTATI}
+            color={props.screen.color}
+          />
         </div>
       </Show>
     </div>

@@ -1,4 +1,5 @@
 import { MappingScreens } from "./types";
+import { Props as AlternateListProps } from "./components/AlternateList";
 
 export const MapScreens: MappingScreens = {
   "langage-screen": {
@@ -40,7 +41,7 @@ export const MapScreens: MappingScreens = {
   },
   "piada-affettati": {
     screenName: "piada-affettati",
-    color: "red",
+    color: "var(--orange-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -112,3 +113,15 @@ export const MapScreens: MappingScreens = {
 };
 
 export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
+
+export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
+  {
+    label: "PROSCIUTTO CRUDO",
+  },
+  {
+    label: "SALAME",
+  },
+  {
+    label: "PROSCIUTTO COTTO",
+  },
+];

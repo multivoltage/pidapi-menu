@@ -4,5 +4,12 @@
   flex-direction: column;
   align-items: center;
   height: var(--content-height);
+  max-height: var(--content-height);
   font-size: 3rem;
+}
+
+.bigTitle {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 1rem 0;
 }

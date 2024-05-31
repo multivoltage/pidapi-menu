@@ -18,7 +18,6 @@ const Header: Component<Props> = (props) => {
   return (
     <header class={styles.container}>
       <div
-        class="ciccio"
         style={{
           flex: 1,
           display: "flex",
