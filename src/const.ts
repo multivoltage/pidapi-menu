@@ -19,6 +19,10 @@ export const MapScreens: MappingScreens = {
     color: "red",
     showHomeIcon: true,
     title: "",
+    prev: {
+      goToScreen: "home",
+      label: "indietro",
+    },
   },
   "scelta-piada": {
     screenName: "scelta-piada",

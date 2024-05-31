@@ -22,6 +22,27 @@ const Header: Component<Props> = (props) => {
           flex: 1,
         }}
       >
+        <Show when={!!myStore().screen.prev}>
+          <div
+            class={styles.backButton}
+            onClick={() =>
+              setScreen(
+                MapScreens[
+                  myStore().screen.prev?.goToScreen as Screen["screenName"]
+                ]
+              )
+            }
+          >
+            <img src="/icons/icon_back.png" width={82} />
+            <span>{myStore().screen.prev?.label}</span>
+          </div>
+        </Show>
+      </div>
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
         <Show when={myStore().screen.screenName !== "langage-screen"}>
           {myStore().lang === "it" && (
             <img
@@ -38,12 +59,6 @@ const Header: Component<Props> = (props) => {
             />
           )}
         </Show>
-      </div>
-      <div
-        style={{
-          flex: 1,
-        }}
-      >
         <img
           onClick={() => setScreen(MapScreens["langage-screen"])}
           src="/icons/icon_home.png"
