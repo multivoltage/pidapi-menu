@@ -162,12 +162,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         >
           AFFETTATI
         </div>
-        <div
-          style={{
-            overflow: "auto",
-            "max-height": "100%",
-          }}
-        >
+        <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="40%"
             list={ITEMS_PIADA_AFFETTATI}
@@ -185,12 +180,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         >
           VERDURE
         </div>
-        <div
-          style={{
-            overflow: "auto",
-            "max-height": "100%",
-          }}
-        >
+        <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="30%"
             negativeOffsetRow="5rem"
@@ -209,12 +199,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         >
           FORMAGGI
         </div>
-        <div
-          style={{
-            overflow: "auto",
-            "max-height": "100%",
-          }}
-        >
+        <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="40%"
             list={ITEMS_PIADA_FORMAGGI}
@@ -232,12 +217,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         >
           DOLCI
         </div>
-        <div
-          style={{
-            overflow: "auto",
-            "max-height": "100%",
-          }}
-        >
+        <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="30%"
             negativeOffsetRow="0"
