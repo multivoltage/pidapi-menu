@@ -76,7 +76,7 @@ export const MapScreens: MappingScreens = {
   },
   "piada-dolce": {
     screenName: "piada-dolce",
-    color: "red",
+    color: "var(--purple-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -86,7 +86,7 @@ export const MapScreens: MappingScreens = {
   },
   "piada-formaggi": {
     screenName: "piada-formaggi",
-    color: "red",
+    color: "var(--blue-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -96,7 +96,7 @@ export const MapScreens: MappingScreens = {
   },
   "piada-verdure": {
     screenName: "piada-verdure",
-    color: "red",
+    color: "var(--green-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -123,5 +123,59 @@ export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   },
   {
     label: "PROSCIUTTO COTTO",
+  },
+];
+
+export const ITEMS_PIADA_VERDURE: AlternateListProps["list"] = [
+  {
+    label: "MISTICANZA",
+  },
+  {
+    label: "RUCOLA",
+  },
+  {
+    label: "POMODORINI",
+  },
+  {
+    label: "MELANZANE",
+  },
+  {
+    label: "CIPOLLA ROSSA",
+  },
+  {
+    label: "CIPOLLA FRITTA",
+  },
+];
+
+export const ITEMS_PIADA_FORMAGGI: AlternateListProps["list"] = [
+  {
+    label: "SQUACCHERONE",
+  },
+  {
+    label: "PECORINO",
+  },
+  {
+    label: "STRACCIATELLA",
+  },
+];
+
+export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
+  {
+    label: "NUTELLA",
+  },
+  {
+    label: "CIOCCOLATO BIANCO",
+  },
+  {
+    label: "CREMA DI PISTACCHIO",
+  },
+  {
+    label: "COCCO",
+  },
+  {
+    label: "GRANELLA NOCCIOLE",
+  },
+  {
+    label: "GRANELLA PISTACCIO",
   },
 ];

@@ -1,16 +1,18 @@
-import { For, Index, type Component } from "solid-js";
+import { Index, type Component } from "solid-js";
 import { Banner } from "../Banner";
 
 export interface Props {
   color: string;
   list: Array<{ label: string; urlImage?: string }>;
   bannerWidth: string;
+  negativeOffsetRow?: string;
 }
 
 export const AlternateList: Component<Props> = ({
   color,
   list,
   bannerWidth,
+  negativeOffsetRow,
 }) => {
   return (
     <Index each={list}>
@@ -22,7 +24,12 @@ export const AlternateList: Component<Props> = ({
             "flex-direction": i % 2 === 0 ? "row" : "row-reverse",
             "align-items": "center",
             "justify-content": "space-between",
-            "margin-top": i === 0 ? 0 : "-3rem",
+            "margin-top":
+              i === 0
+                ? 0
+                : !!negativeOffsetRow
+                ? `-${negativeOffsetRow}`
+                : "-3rem",
           }}
         >
           <div

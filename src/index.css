@@ -21,8 +21,10 @@ code {
 :root {
   --header-height: 10vh;
   --content-height: 90vh;
-  --gree-color: rgb(58, 165, 42);
-  --red-color: red;
+  --green-color: rgb(6, 211, 0);
+  --red-color: rgb(255,2,0);
   --orange-color: rgb(237,105,45);
+  --blue-color: rgb(1, 132, 134);
+  --purple-color: rgb(155,5,88);
 }
 /** end variables **/

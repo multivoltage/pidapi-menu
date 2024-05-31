@@ -7,7 +7,12 @@ import {
   AlternateList,
   Props as AlternateListProps,
 } from "../../components/AlternateList";
-import { ITEMS_PIADA_AFFETTATI } from "../../const";
+import {
+  ITEMS_PIADA_AFFETTATI,
+  ITEMS_PIADA_DOLCE,
+  ITEMS_PIADA_FORMAGGI,
+  ITEMS_PIADA_VERDURE,
+} from "../../const";
 
 const banner1 = HOME_SCREEN_ASSETS[0];
 const banner2 = HOME_SCREEN_ASSETS[1];
@@ -103,7 +108,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="green"
+                color="var(--green-color)"
                 label="VERDURE"
                 type="text"
                 width="30vw"
@@ -120,7 +125,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="purple"
+                color="var(--purple-color)"
                 label="DOLCi"
                 type="text"
                 width="30vw"
@@ -137,7 +142,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="blue"
+                color="var(--blue-color)"
                 label="FORMAGGI"
                 type="text"
                 width="30vw"
@@ -166,6 +171,77 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           <AlternateList
             bannerWidth="70%"
             list={ITEMS_PIADA_AFFETTATI}
+            color={props.screen.color}
+          />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "piada-verdure"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          VERDURE
+        </div>
+        <div
+          style={{
+            overflow: "auto",
+            "max-height": "100%",
+          }}
+        >
+          <AlternateList
+            bannerWidth="45%"
+            negativeOffsetRow="2rem"
+            list={ITEMS_PIADA_VERDURE}
+            color={props.screen.color}
+          />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "piada-formaggi"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          FORMAGGI
+        </div>
+        <div
+          style={{
+            overflow: "auto",
+            "max-height": "100%",
+          }}
+        >
+          <AlternateList
+            bannerWidth="70%"
+            list={ITEMS_PIADA_FORMAGGI}
+            color={props.screen.color}
+          />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "piada-dolce"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          DOLCI
+        </div>
+        <div
+          style={{
+            overflow: "auto",
+            "max-height": "100%",
+          }}
+        >
+          <AlternateList
+            bannerWidth="30%"
+            negativeOffsetRow="0"
+            list={ITEMS_PIADA_DOLCE}
             color={props.screen.color}
           />
         </div>
