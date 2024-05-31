@@ -28,8 +28,14 @@ export type Screen = {
   showHomeIcon: boolean;
   title: string;
   color: string;
-  prev?: Screen["screenName"];
-  next?: Screen["screenName"];
+  prev?: {
+    goToScreen: Screen["screenName"];
+    label: string;
+  };
+  next?: {
+    goToScreen: Screen["screenName"];
+    label: string;
+  };
 };
 
 export type MyStore = {

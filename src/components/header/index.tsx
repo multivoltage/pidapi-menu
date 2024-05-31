@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import { Screen } from "../../types";
 import { useMyStore } from "../../StoreProvider";
 import { MapScreens } from "../../const";
+import { LabelGluenFree } from "./LabelGluenFree";
 
 interface Props {
   showHome: boolean;
@@ -38,14 +39,13 @@ const Header: Component<Props> = (props) => {
           )}
         </Show>
       </div>
-
       <div
         style={{
           flex: 1,
         }}
       >
         <img
-          onClick={() => setScreen(MapScreens.home)}
+          onClick={() => setScreen(MapScreens["langage-screen"])}
           src="/icons/icon_home.png"
           width={82}
         />
@@ -56,20 +56,7 @@ const Header: Component<Props> = (props) => {
           flex: 1,
         }}
       >
-        <Show when={props.showAllLabelGlutenFree}>
-          <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-          <br />
-          <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
-        </Show>
-
-        <Show when={!props.showAllLabelGlutenFree}>
-          <Show when={myStore().lang === "it"}>
-            <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-          </Show>
-          <Show when={myStore().lang === "en"}>
-            <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
-          </Show>
-        </Show>
+        <LabelGluenFree showAllLabelGlutenFree={props.showAllLabelGlutenFree} />
       </div>
     </header>
   );
