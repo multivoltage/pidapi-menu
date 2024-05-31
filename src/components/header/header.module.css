@@ -13,9 +13,13 @@
     font-size: 2rem;
 }
 
-.backButton {
+.navigationButton {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+
+img.nextArrow {
+  transform: rotate(180deg);
 }

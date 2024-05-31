@@ -4,7 +4,7 @@ export const MapScreens: MappingScreens = {
   "langage-screen": {
     screenName: "langage-screen",
     color: "white",
-    showHomeIcon: false,
+    showHomeIcon: true,
     title: "home",
   },
   home: {
@@ -12,12 +12,16 @@ export const MapScreens: MappingScreens = {
     color: "white",
     showHomeIcon: false,
     title: "home",
+    prev: {
+      goToScreen: "langage-screen",
+      label: "",
+    },
   },
 
   "scelta-cappelletti": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
     prev: {
       goToScreen: "home",
@@ -27,24 +31,32 @@ export const MapScreens: MappingScreens = {
   "scelta-piada": {
     screenName: "scelta-piada",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
     prev: {
       goToScreen: "home",
-      label: "indietro",
+      label: "",
     },
   },
   "piada-affettati": {
     screenName: "piada-affettati",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
+    prev: {
+      goToScreen: "scelta-piada",
+      label: "",
+    },
+    next: {
+      goToScreen: "piada-verdure",
+      label: "VERDURE",
+    },
   },
 
   "scelta-croissant": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
     prev: {
       goToScreen: "home",
@@ -54,7 +66,7 @@ export const MapScreens: MappingScreens = {
   "croissant-fritti": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
     prev: {
       goToScreen: "home",
@@ -64,25 +76,37 @@ export const MapScreens: MappingScreens = {
   "piada-dolce": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
+    prev: {
+      goToScreen: "scelta-piada",
+      label: "",
+    },
   },
   "piada-formaggi": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
+    prev: {
+      goToScreen: "scelta-piada",
+      label: "",
+    },
   },
   "piada-verdure": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
+    prev: {
+      goToScreen: "scelta-piada",
+      label: "",
+    },
   },
   "scelta-girella": {
     screenName: "scelta-cappelletti",
     color: "red",
-    showHomeIcon: true,
+    showHomeIcon: false,
     title: "",
   },
 };

@@ -77,6 +77,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 label="AFFETTATI"
                 type="text"
                 width="30vw"
+                goToScreen="piada-affettati"
               />
             </div>
             <div
@@ -87,7 +88,13 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 transform: "translateY(-50%)",
               }}
             >
-              <Banner color="green" label="VERDURE" type="text" width="30vw" />
+              <Banner
+                color="green"
+                label="VERDURE"
+                type="text"
+                width="30vw"
+                goToScreen="piada-verdure"
+              />
             </div>
 
             <div
@@ -98,7 +105,13 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 bottom: 0,
               }}
             >
-              <Banner color="purple" label="DOLCi" type="text" width="30vw" />
+              <Banner
+                color="purple"
+                label="DOLCi"
+                type="text"
+                width="30vw"
+                goToScreen="piada-dolce"
+              />
             </div>
 
             <div
@@ -109,7 +122,13 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 transform: "translateY(-50%)",
               }}
             >
-              <Banner color="blue" label="FORMAGGI" type="text" width="30vw" />
+              <Banner
+                color="blue"
+                label="FORMAGGI"
+                type="text"
+                width="30vw"
+                goToScreen="piada-formaggi"
+              />
             </div>
           </div>
         </div>

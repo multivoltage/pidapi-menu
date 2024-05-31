@@ -18,7 +18,8 @@ const App: Component = () => {
   }
 
   const timer = window.setTimeout(() => {
-    setScreen(MapScreens["langage-screen"]);
+    // TODO creare and restart the timer on click
+    // setScreen(MapScreens["langage-screen"]);
   }, RESET_TO_LANGUAGE_SELECTOR_TIME);
 
   onCleanup(() => {

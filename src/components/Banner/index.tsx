@@ -35,6 +35,7 @@ export const Banner: Component<Props> = (props) => {
           style={{
             color: props.color,
           }}
+          class={styles.text}
         >
           {props.label}
         </span>

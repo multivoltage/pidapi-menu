@@ -18,13 +18,16 @@ const Header: Component<Props> = (props) => {
   return (
     <header class={styles.container}>
       <div
+        class="ciccio"
         style={{
           flex: 1,
+          display: "flex",
+          "justify-content": "center",
         }}
       >
         <Show when={!!myStore().screen.prev}>
           <div
-            class={styles.backButton}
+            class={styles.navigationButton}
             onClick={() =>
               setScreen(
                 MapScreens[
@@ -41,6 +44,7 @@ const Header: Component<Props> = (props) => {
       <div
         style={{
           flex: 1,
+          "flex-grow": 0,
         }}
       >
         <Show when={myStore().screen.screenName !== "langage-screen"}>
@@ -59,11 +63,13 @@ const Header: Component<Props> = (props) => {
             />
           )}
         </Show>
-        <img
-          onClick={() => setScreen(MapScreens["langage-screen"])}
-          src="/icons/icon_home.png"
-          width={82}
-        />
+        <Show when={myStore().screen.showHomeIcon}>
+          <img
+            onClick={() => setScreen(MapScreens["langage-screen"])}
+            src="/icons/icon_home.png"
+            width={82}
+          />
+        </Show>
       </div>
 
       <div
@@ -73,6 +79,32 @@ const Header: Component<Props> = (props) => {
       >
         <LabelGluenFree showAllLabelGlutenFree={props.showAllLabelGlutenFree} />
       </div>
+
+      <Show when={!!myStore().screen.next}>
+        <div
+          style={{
+            flex: 1,
+          }}
+        >
+          <div
+            class={styles.navigationButton}
+            onClick={() =>
+              setScreen(
+                MapScreens[
+                  myStore().screen.next?.goToScreen as Screen["screenName"]
+                ]
+              )
+            }
+          >
+            <img
+              src="/icons/icon_back.png"
+              width={82}
+              class={styles.nextArrow}
+            />
+            <span>{myStore().screen.next?.label}</span>
+          </div>
+        </div>
+      </Show>
     </header>
   );
 };
