@@ -17,39 +17,48 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
   return (
     <div class={styles.container}>
       <Show when={props.screen.screenName === "home"}>
-        <div>
-          <div
-            style={{
-              display: "flex",
-              "justify-content": "center",
-            }}
-          >
-            <Banner
-              type="img"
-              url={banner1.url}
-              width="40vw"
-              goToScreen={banner1.goToScreen}
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              "justify-content": "center",
-              gap: "3rem",
-            }}
-          >
-            <Banner
-              type="img"
-              url={banner2.url}
-              width="40vw"
-              goToScreen={banner2.goToScreen}
-            />
-            <Banner
-              type="img"
-              url={banner3.url}
-              width="40vw"
-              goToScreen={banner3.goToScreen}
-            />
+        <div
+          class="pluto"
+          style={{
+            display: "flex",
+            "align-items": "center",
+            height: "100%",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+              }}
+            >
+              <Banner
+                type="img"
+                url={banner1.url}
+                width="40vw"
+                goToScreen={banner1.goToScreen}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+                gap: "3rem",
+              }}
+            >
+              <Banner
+                type="img"
+                url={banner2.url}
+                width="40vw"
+                goToScreen={banner2.goToScreen}
+              />
+              <Banner
+                type="img"
+                url={banner3.url}
+                width="40vw"
+                goToScreen={banner3.goToScreen}
+              />
+            </div>
           </div>
         </div>
       </Show>
@@ -155,7 +164,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           <AlternateList
-            bannerWidth="20%"
+            bannerWidth="70%"
             list={ITEMS_PIADA_AFFETTATI}
             color={props.screen.color}
           />

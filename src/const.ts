@@ -55,7 +55,7 @@ export const MapScreens: MappingScreens = {
   },
 
   "scelta-croissant": {
-    screenName: "scelta-cappelletti",
+    screenName: "scelta-croissant",
     color: "red",
     showHomeIcon: false,
     title: "",
@@ -65,7 +65,7 @@ export const MapScreens: MappingScreens = {
     },
   },
   "croissant-fritti": {
-    screenName: "scelta-cappelletti",
+    screenName: "croissant-fritti",
     color: "red",
     showHomeIcon: false,
     title: "",
@@ -75,7 +75,7 @@ export const MapScreens: MappingScreens = {
     },
   },
   "piada-dolce": {
-    screenName: "scelta-cappelletti",
+    screenName: "piada-dolce",
     color: "red",
     showHomeIcon: false,
     title: "",
@@ -85,7 +85,7 @@ export const MapScreens: MappingScreens = {
     },
   },
   "piada-formaggi": {
-    screenName: "scelta-cappelletti",
+    screenName: "piada-formaggi",
     color: "red",
     showHomeIcon: false,
     title: "",
@@ -95,7 +95,7 @@ export const MapScreens: MappingScreens = {
     },
   },
   "piada-verdure": {
-    screenName: "scelta-cappelletti",
+    screenName: "piada-verdure",
     color: "red",
     showHomeIcon: false,
     title: "",
@@ -105,7 +105,7 @@ export const MapScreens: MappingScreens = {
     },
   },
   "scelta-girella": {
-    screenName: "scelta-cappelletti",
+    screenName: "scelta-girella",
     color: "red",
     showHomeIcon: false,
     title: "",

@@ -22,6 +22,7 @@ export const AlternateList: Component<Props> = ({
             "flex-direction": i % 2 === 0 ? "row" : "row-reverse",
             "align-items": "center",
             "justify-content": "space-between",
+            "margin-top": i === 0 ? 0 : "-3rem",
           }}
         >
           <div
