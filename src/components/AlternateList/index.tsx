@@ -32,29 +32,29 @@ export const AlternateList: Component<Props> = ({
                 : "-3rem",
           }}
         >
-          <div
-            style={{
-              "flex-basis": "50%",
-              display: "flex",
-              "justify-content": "center",
-            }}
-          >
-            <Banner
-              width={bannerWidth}
-              type="img"
-              url={
-                item().urlImage ||
-                "https://www.frescopiada.com/wp-content/uploads/2020/01/La-piada-del-chiosco-fronte.jpg"
-              }
-            />
-          </div>
+          <Banner
+            width={bannerWidth}
+            type="img"
+            url={
+              item().urlImage ||
+              "https://www.frescopiada.com/wp-content/uploads/2020/01/La-piada-del-chiosco-fronte.jpg"
+            }
+          />
+
           <span
             style={{
               "flex-basis": "50%",
+              "text-align": i % 2 === 0 ? "left" : "right",
             }}
           >
             {item().label}
           </span>
+
+          <span
+            style={{
+              flex: 0.5,
+            }}
+          ></span>
         </div>
       )}
     </Index>

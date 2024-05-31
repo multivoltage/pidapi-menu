@@ -169,7 +169,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           <AlternateList
-            bannerWidth="70%"
+            bannerWidth="40%"
             list={ITEMS_PIADA_AFFETTATI}
             color={props.screen.color}
           />
@@ -192,8 +192,8 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           <AlternateList
-            bannerWidth="45%"
-            negativeOffsetRow="2rem"
+            bannerWidth="30%"
+            negativeOffsetRow="5rem"
             list={ITEMS_PIADA_VERDURE}
             color={props.screen.color}
           />
@@ -216,7 +216,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           <AlternateList
-            bannerWidth="70%"
+            bannerWidth="40%"
             list={ITEMS_PIADA_FORMAGGI}
             color={props.screen.color}
           />
