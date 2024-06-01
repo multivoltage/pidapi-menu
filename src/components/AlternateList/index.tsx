@@ -35,10 +35,7 @@ export const AlternateList: Component<Props> = ({
           <Banner
             width={bannerWidth}
             type="img"
-            url={
-              item().urlImage ||
-              "https://www.frescopiada.com/wp-content/uploads/2020/01/La-piada-del-chiosco-fronte.jpg"
-            }
+            url={item().urlImage as string}
           />
 
           <span
