@@ -239,8 +239,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
-            bannerWidth="30%"
-            negativeOffsetRow="0"
+            bannerWidth="60%"
             list={ITEMS_CAPPELLETTI}
             color={props.screen.color}
           />

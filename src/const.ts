@@ -21,7 +21,7 @@ export const MapScreens: MappingScreens = {
 
   "scelta-cappelletti": {
     screenName: "scelta-cappelletti",
-    color: "red",
+    color: "var(--yellow-color)",
     showHomeIcon: false,
     title: "",
     prev: {
