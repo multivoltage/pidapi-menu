@@ -19,9 +19,9 @@ code {
 
 /** variable **/
 :root {
-  --header-height: 10vh;
-  --content-height: 90vh;
-  --green-color: rgb(6, 211, 0);
+  --header-height: 15vh;
+  --content-height: 85vh;
+  --green-color: rgb(30, 32, 30);
   --red-color: rgb(255,2,0);
   --orange-color: rgb(237,105,45);
   --orange-light-color: rgb(225,143,0);

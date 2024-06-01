@@ -21,9 +21,28 @@ const Header: Component<Props> = (props) => {
         style={{
           flex: 1,
           display: "flex",
-          "justify-content": "center",
+          "justify-content": "left",
+          "align-items": "center",
         }}
       >
+        <Show when={myStore().screen.screenName !== "langage-screen"}>
+          <div>
+            {myStore().lang === "it" && (
+              <img
+                src="/images/bandiera_inglese.png"
+                width={64}
+                onClick={[setLang, "en"]}
+              />
+            )}
+            {myStore().lang === "en" && (
+              <img
+                src="/images/bandiera_italiano.png"
+                width={64}
+                onClick={[setLang, "it"]}
+              />
+            )}
+          </div>
+        </Show>
         <Show when={!!myStore().screen.prev}>
           <div
             class={styles.navigationButton}
@@ -35,7 +54,7 @@ const Header: Component<Props> = (props) => {
               )
             }
           >
-            <img src="/icons/icon_back.png" width={82} />
+            <img src="/icons/icon_back.png" width={64} />
             <span>{myStore().screen.prev?.label}</span>
           </div>
         </Show>
@@ -46,29 +65,11 @@ const Header: Component<Props> = (props) => {
           "flex-grow": 0,
         }}
       >
-        <Show when={myStore().screen.screenName !== "langage-screen"}>
-          {myStore().lang === "it" && (
-            <img
-              src="/images/bandiera_inglese.png"
-              width={64}
-              onClick={[setLang, "en"]}
-            />
-          )}
-          {myStore().lang === "en" && (
-            <img
-              src="/images/bandiera_italiano.png"
-              width={64}
-              onClick={[setLang, "it"]}
-            />
-          )}
-        </Show>
-        <Show when={myStore().screen.showHomeIcon}>
-          <img
-            onClick={() => setScreen(MapScreens["langage-screen"])}
-            src="/icons/icon_home.png"
-            width={82}
-          />
-        </Show>
+        <img
+          onClick={() => setScreen(MapScreens["langage-screen"])}
+          src="/icons/icon_home.png"
+          width={82}
+        />
       </div>
 
       <div
@@ -76,15 +77,7 @@ const Header: Component<Props> = (props) => {
           flex: 1,
         }}
       >
-        <LabelGluenFree showAllLabelGlutenFree={props.showAllLabelGlutenFree} />
-      </div>
-
-      <Show when={!!myStore().screen.next}>
-        <div
-          style={{
-            flex: 1,
-          }}
-        >
+        <Show when={!!myStore().screen.next}>
           <div
             class={styles.navigationButton}
             onClick={() =>
@@ -97,13 +90,22 @@ const Header: Component<Props> = (props) => {
           >
             <img
               src="/icons/icon_back.png"
-              width={82}
+              width={64}
               class={styles.nextArrow}
             />
             <span>{myStore().screen.next?.label}</span>
           </div>
-        </div>
-      </Show>
+        </Show>
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+          "flex-basis": "100%",
+        }}
+      >
+        <LabelGluenFree showAllLabelGlutenFree={props.showAllLabelGlutenFree} />
+      </div>
     </header>
   );
 };

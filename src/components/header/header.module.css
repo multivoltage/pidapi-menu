@@ -1,11 +1,13 @@
 .container {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   border-bottom: 1px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
-  
+  flex-wrap: wrap;
 }
 
 .labelGlutenFee {
@@ -16,7 +18,7 @@
 .navigationButton {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   font-size: 3rem;
 }
 

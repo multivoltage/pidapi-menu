@@ -15,7 +15,7 @@ export const LabelGluenFree: Component<Props> = (props) => {
     <>
       <Show when={props.showAllLabelGlutenFree}>
         <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-        <br />
+        <span class={styles.labelGlutenFee}>{" - "}</span>
         <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
       </Show>
 
