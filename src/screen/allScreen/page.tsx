@@ -9,6 +9,7 @@ import {
 } from "../../components/AlternateList";
 import {
   ITEMS_CAPPELLETTI,
+  ITEMS_CROSTATA,
   ITEMS_PIADA_AFFETTATI,
   ITEMS_PIADA_DOLCE,
   ITEMS_PIADA_FORMAGGI,
@@ -312,6 +313,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 label="CROISSANT FRITTO"
                 color="var(--orange-light-color)"
                 width="40vw"
+                goToScreen="croissant-fritti"
               />
             </div>
             <div
@@ -326,15 +328,35 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 label="CROSTATA"
                 color="var(--orange-color)"
                 width="40vw"
+                goToScreen="scelta-crostata"
               />
               <Banner
                 type="text"
                 label="GIRELLA"
                 color="var(--yellow-color)"
                 width="40vw"
+                goToScreen="scelta-girella"
               />
             </div>
           </div>
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "scelta-crostata"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          CROSTATA
+        </div>
+        <div class={styles.containerAlternateSection}>
+          <AlternateList
+            bannerWidth="60%"
+            list={ITEMS_CROSTATA}
+            color={props.screen.color}
+          />
         </div>
       </Show>
     </div>

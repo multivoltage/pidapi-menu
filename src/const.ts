@@ -122,6 +122,16 @@ export const MapScreens: MappingScreens = {
     showHomeIcon: false,
     title: "",
   },
+  "scelta-crostata": {
+    screenName: "scelta-crostata",
+    color: " --orange-color",
+    showHomeIcon: false,
+    title: "",
+    prev: {
+      goToScreen: "scelta-croissant",
+      label: "",
+    },
+  },
 };
 
 export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
@@ -193,6 +203,18 @@ export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
 ];
 
 export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
+  {
+    label: "",
+  },
+  {
+    label: "",
+  },
+  {
+    label: "",
+  },
+];
+
+export const ITEMS_CROSTATA: AlternateListProps["list"] = [
   {
     label: "",
   },
