@@ -24,7 +24,9 @@ code {
   --green-color: rgb(6, 211, 0);
   --red-color: rgb(255,2,0);
   --orange-color: rgb(237,105,45);
+  --orange-light-color: rgb(225,143,0);
   --blue-color: rgb(1, 132, 134);
   --purple-color: rgb(155,5,88);
+  --yellow-color: rgb(255,221,79)
 }
 /** end variables **/

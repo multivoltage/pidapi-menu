@@ -8,12 +8,14 @@ import {
   Props as AlternateListProps,
 } from "../../components/AlternateList";
 import {
+  ITEMS_CAPPELLETTI,
   ITEMS_PIADA_AFFETTATI,
   ITEMS_PIADA_DOLCE,
   ITEMS_PIADA_FORMAGGI,
   ITEMS_PIADA_VERDURE,
 } from "../../const";
 
+// banners home
 const banner1 = HOME_SCREEN_ASSETS[0];
 const banner2 = HOME_SCREEN_ASSETS[1];
 const banner3 = HOME_SCREEN_ASSETS[2];
@@ -23,7 +25,6 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
     <div class={styles.container}>
       <Show when={props.screen.screenName === "home"}>
         <div
-          class="pluto"
           style={{
             display: "flex",
             "align-items": "center",
@@ -224,6 +225,117 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             list={ITEMS_PIADA_DOLCE}
             color={props.screen.color}
           />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "scelta-cappelletti"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          CAPPELLETTI FRITTI
+        </div>
+        <div class={styles.containerAlternateSection}>
+          <AlternateList
+            bannerWidth="30%"
+            negativeOffsetRow="0"
+            list={ITEMS_CAPPELLETTI}
+            color={props.screen.color}
+          />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "piada-dolce"}>
+        <div
+          style={{
+            display: "flex",
+            "align-items": "center",
+            height: "100%",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+              }}
+            >
+              <Banner
+                type="img"
+                url={banner1.url}
+                width="40vw"
+                goToScreen={banner1.goToScreen}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+                gap: "3rem",
+              }}
+            >
+              <Banner
+                type="img"
+                url={banner2.url}
+                width="40vw"
+                goToScreen={banner2.goToScreen}
+              />
+              <Banner
+                type="img"
+                url={banner3.url}
+                width="40vw"
+                goToScreen={banner3.goToScreen}
+              />
+            </div>
+          </div>
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "scelta-croissant"}>
+        <div
+          style={{
+            display: "flex",
+            "align-items": "center",
+            height: "100%",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+              }}
+            >
+              <Banner
+                type="text"
+                label="CROISSANT FRITTO"
+                color="var(--orange-light-color)"
+                width="40vw"
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                "justify-content": "center",
+                gap: "3rem",
+              }}
+            >
+              <Banner
+                type="text"
+                label="CROSTATA"
+                color="var(--orange-color)"
+                width="40vw"
+              />
+              <Banner
+                type="text"
+                label="GIRELLA"
+                color="var(--yellow-color)"
+                width="40vw"
+              />
+            </div>
+          </div>
         </div>
       </Show>
     </div>

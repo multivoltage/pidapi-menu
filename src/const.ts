@@ -26,7 +26,7 @@ export const MapScreens: MappingScreens = {
     title: "",
     prev: {
       goToScreen: "home",
-      label: "indietro",
+      label: "",
     },
   },
   "scelta-piada": {
@@ -61,7 +61,7 @@ export const MapScreens: MappingScreens = {
     title: "",
     prev: {
       goToScreen: "home",
-      label: "indietro",
+      label: "",
     },
   },
   "croissant-fritti": {
@@ -71,7 +71,7 @@ export const MapScreens: MappingScreens = {
     title: "",
     prev: {
       goToScreen: "home",
-      label: "indietro",
+      label: "",
     },
   },
   "piada-dolce": {
@@ -189,5 +189,17 @@ export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
   },
   {
     label: "GRANELLA PISTACCIO",
+  },
+];
+
+export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
+  {
+    label: "",
+  },
+  {
+    label: "",
+  },
+  {
+    label: "",
   },
 ];

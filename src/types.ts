@@ -1,4 +1,4 @@
-type AssetType = "img" | "video";
+type AssetType = "img" | "video" | "text";
 
 export type Asset = {
   type: AssetType;
