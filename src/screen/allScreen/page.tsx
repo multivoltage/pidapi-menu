@@ -10,6 +10,7 @@ import {
 import {
   ITEMS_CAPPELLETTI,
   ITEMS_CROSTATA,
+  ITEMS_GIRELLA,
   ITEMS_PIADA_AFFETTATI,
   ITEMS_PIADA_DOLCE,
   ITEMS_PIADA_FORMAGGI,
@@ -247,52 +248,6 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         </div>
       </Show>
 
-      <Show when={props.screen.screenName === "piada-dolce"}>
-        <div
-          style={{
-            display: "flex",
-            "align-items": "center",
-            height: "100%",
-          }}
-        >
-          <div>
-            <div
-              style={{
-                display: "flex",
-                "justify-content": "center",
-              }}
-            >
-              <Banner
-                type="img"
-                url={banner1.url}
-                width="40vw"
-                goToScreen={banner1.goToScreen}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                "justify-content": "center",
-                gap: "3rem",
-              }}
-            >
-              <Banner
-                type="img"
-                url={banner2.url}
-                width="40vw"
-                goToScreen={banner2.goToScreen}
-              />
-              <Banner
-                type="img"
-                url={banner3.url}
-                width="40vw"
-                goToScreen={banner3.goToScreen}
-              />
-            </div>
-          </div>
-        </div>
-      </Show>
-
       <Show when={props.screen.screenName === "scelta-croissant"}>
         <div
           style={{
@@ -355,6 +310,24 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           <AlternateList
             bannerWidth="60%"
             list={ITEMS_CROSTATA}
+            color={props.screen.color}
+          />
+        </div>
+      </Show>
+
+      <Show when={props.screen.screenName === "scelta-girella"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          GIRELLA
+        </div>
+        <div class={styles.containerAlternateSection}>
+          <AlternateList
+            bannerWidth="60%"
+            list={ITEMS_GIRELLA}
             color={props.screen.color}
           />
         </div>

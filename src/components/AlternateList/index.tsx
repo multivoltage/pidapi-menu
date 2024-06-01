@@ -35,7 +35,7 @@ export const AlternateList: Component<Props> = ({
           <Banner
             width={bannerWidth}
             type="img"
-            url={item().urlImage as string}
+            url={item().urlImage || "https://placehold.co/800x800"}
           />
 
           <span

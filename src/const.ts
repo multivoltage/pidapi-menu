@@ -205,16 +205,28 @@ export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
 export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
   {
     label: "",
+    urlImage: "/images/cappelletti_stesi_2.jpg",
   },
   {
     label: "",
+    urlImage: "/images/cappelletto_singolo.jpg",
   },
   {
     label: "",
+    urlImage: "/images/cappelletti_stesi.jpg",
   },
 ];
 
 export const ITEMS_CROSTATA: AlternateListProps["list"] = [
+  {
+    label: "/images/crostata.jpg",
+  },
+  {
+    label: "/images/crostata_con_pezzi.jpg",
+  },
+];
+
+export const ITEMS_GIRELLA: AlternateListProps["list"] = [
   {
     label: "",
   },
