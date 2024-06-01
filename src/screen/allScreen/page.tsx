@@ -332,6 +332,37 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           />
         </div>
       </Show>
+
+      <Show when={props.screen.screenName === "croissant-fritti"}>
+        <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          CROISSANT FRITTI
+        </div>
+        <div
+          style={{
+            display: "flex",
+            "justify-content": "space-between",
+            width: "90%",
+          }}
+        >
+          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
+          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
+          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
+        </div>
+
+        <div
+          style={{
+            "margin-top": "2rem",
+            color: props.screen.color,
+          }}
+        >
+          TOPPINGS
+        </div>
+      </Show>
     </div>
   );
 };

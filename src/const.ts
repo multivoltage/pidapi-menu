@@ -66,12 +66,16 @@ export const MapScreens: MappingScreens = {
   },
   "croissant-fritti": {
     screenName: "croissant-fritti",
-    color: "red",
+    color: "var(--yellow-color)",
     showHomeIcon: false,
     title: "",
     prev: {
-      goToScreen: "home",
+      goToScreen: "scelta-croissant",
       label: "",
+    },
+    next: {
+      goToScreen: "scelta-girella",
+      label: "GIRELLA",
     },
   },
   "piada-dolce": {
@@ -121,6 +125,14 @@ export const MapScreens: MappingScreens = {
     color: "red",
     showHomeIcon: false,
     title: "",
+    prev: {
+      goToScreen: "scelta-croissant",
+      label: "",
+    },
+    next: {
+      goToScreen: "scelta-crostata",
+      label: "CROSTATA",
+    },
   },
   "scelta-crostata": {
     screenName: "scelta-crostata",
@@ -219,16 +231,19 @@ export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
 
 export const ITEMS_CROSTATA: AlternateListProps["list"] = [
   {
-    label: "/images/crostata.jpg",
+    label: "",
+    urlImage: "/images/crostata.jpg",
   },
   {
-    label: "/images/crostata_con_pezzi.jpg",
+    label: "",
+    urlImage: "/images/crostata_con_pezzi.jpg",
   },
 ];
 
 export const ITEMS_GIRELLA: AlternateListProps["list"] = [
   {
     label: "",
+    urlImage: "/images/girella.jpg",
   },
   {
     label: "",
