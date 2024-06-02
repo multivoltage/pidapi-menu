@@ -143,6 +143,10 @@ export const MapScreens: MappingScreens = {
       goToScreen: "scelta-croissant",
       label: "",
     },
+    next: {
+      goToScreen: "croissant-fritti",
+      label: "cappelletti_fritti",
+    },
   },
 };
 
@@ -235,6 +239,7 @@ export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
     label: "",
     urlImage: "/images/cappelletto_singolo.jpg",
     objectFit: "contain",
+    animationRotate: true,
   },
   {
     label: "",

@@ -9,6 +9,7 @@ type Props = { width: string; goToScreen?: Screen["screenName"] } & (
       type: "img";
       url: string;
       objectFit?: "cover" | "contain";
+      animationRotate?: boolean;
     }
   | {
       type: "text";
@@ -23,6 +24,10 @@ export const Banner: Component<Props> = (props) => {
   return (
     <div
       class={styles.container}
+      classList={{
+        [styles.container]: true,
+        "rotazione-loop": props.type === "img" && !!props.animationRotate,
+      }}
       style={{
         width: props.width,
       }}

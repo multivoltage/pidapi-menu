@@ -8,6 +8,7 @@ export interface Props {
     label: string;
     urlImage?: string;
     objectFit?: "cover" | "contain";
+    animationRotate?: boolean;
   }>;
   bannerWidth: string;
   negativeOffsetRow?: string;
@@ -43,6 +44,7 @@ export const AlternateList: Component<Props> = ({
             type="img"
             url={item().urlImage || "https://placehold.co/800x800"}
             objectFit={item().objectFit}
+            animationRotate={item().animationRotate}
           />
 
           <span
