@@ -14,7 +14,7 @@
 }
 
 .labelGlutenFee {
-    color: var(--red-color);
+    color: var(--label-gluten-free-color);
     font-size: 2rem;
     font-weight: bold;
 }
