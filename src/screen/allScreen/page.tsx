@@ -28,10 +28,6 @@ const banner3 = HOME_SCREEN_ASSETS[2];
 export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
   const { t } = useTranslation();
 
-  const color = MapScreens["scelta-cappelletti"].color
-    .replace("var(", "")
-    .replace(")", "");
-  debugger;
   return (
     <div class={styles.container}>
       <Show when={props.screen.screenName === "home"}>

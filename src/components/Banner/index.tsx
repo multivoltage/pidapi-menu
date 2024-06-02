@@ -1,4 +1,10 @@
-import { Show, createEffect, onCleanup, type Component } from "solid-js";
+import {
+  Show,
+  createEffect,
+  onCleanup,
+  onMount,
+  type Component,
+} from "solid-js";
 import styles from "./banner.module.css";
 import { Screen } from "../../types";
 import { useMyStore } from "../../StoreProvider";
@@ -24,10 +30,11 @@ type Props = { width: string; goToScreen?: Screen["screenName"] } & (
 
 export const Banner: Component<Props> = (props) => {
   const { setScreen } = useMyStore();
+
   const idCanvas = `${props.type}-${props.goToScreen}-${props.width}`;
   let container!: HTMLDivElement;
 
-  const timer = setTimeout(() => {
+  function setupTopLabel() {
     let canvas = document.getElementById(idCanvas) as HTMLCanvasElement;
 
     if (!canvas) {
@@ -73,12 +80,10 @@ export const Banner: Component<Props> = (props) => {
       context.fillText(string[i], 0, 0);
       context.restore();
     }
+  }
 
-    console.log("xxx");
-  }, 10);
-
-  onCleanup(() => {
-    clearTimeout(timer);
+  createEffect(() => {
+    setupTopLabel();
   });
 
   return (
