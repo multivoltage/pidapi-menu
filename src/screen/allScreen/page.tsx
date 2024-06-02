@@ -17,6 +17,7 @@ import {
   ITEMS_PIADA_VERDURE,
   ITEMS_TOPPING,
 } from "../../const";
+import { useTranslation } from "../../i18n";
 
 // banners home
 const banner1 = HOME_SCREEN_ASSETS[0];
@@ -24,6 +25,8 @@ const banner2 = HOME_SCREEN_ASSETS[1];
 const banner3 = HOME_SCREEN_ASSETS[2];
 
 export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
+  const { t } = useTranslation();
+
   return (
     <div class={styles.container}>
       <Show when={props.screen.screenName === "home"}>
@@ -75,9 +78,9 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
       <Show when={props.screen.screenName === "scelta-piada"}>
         <div>
           <div>
-            <div>PIADA PICCOLA: 1 GUSTO</div>
-            <div>PIADA MEDIA: 2 GUSTI</div>
-            <div>PIADA GRANDE: 3 GUSTI</div>
+            <div>{t("piada_piccola")}</div>
+            <div>{t("piada_media")}</div>
+            <div>{t("piada_grande")}</div>
           </div>
 
           <div
@@ -97,7 +100,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 color="orange"
-                label="AFFETTATI"
+                label={t("affettati")}
                 type="text"
                 width="30vw"
                 goToScreen="piada-affettati"
@@ -113,7 +116,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 color="var(--green-color)"
-                label="VERDURE"
+                label={t("verdure")}
                 type="text"
                 width="30vw"
                 goToScreen="piada-verdure"
@@ -130,7 +133,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 color="var(--purple-color)"
-                label="DOLCi"
+                label={t("dolci")}
                 type="text"
                 width="30vw"
                 goToScreen="piada-dolce"
@@ -147,7 +150,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 color="var(--blue-color)"
-                label="FORMAGGI"
+                label={t("formaggi")}
                 type="text"
                 width="30vw"
                 goToScreen="piada-formaggi"
@@ -164,7 +167,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          AFFETTATI
+          {t("affettati")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -182,7 +185,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          VERDURE
+          {t("verdure")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -201,7 +204,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          FORMAGGI
+          {t("formaggi")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -219,7 +222,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          DOLCI
+          {t("dolci")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -238,7 +241,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          CAPPELLETTI FRITTI
+          {t("cappelletti_fritti")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -267,7 +270,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 type="text"
-                label="CROISSANT FRITTO"
+                label={t("croissant_fritti")}
                 color="var(--orange-light-color)"
                 width="40vw"
                 goToScreen="croissant-fritti"
@@ -282,14 +285,14 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             >
               <Banner
                 type="text"
-                label="CROSTATA"
+                label={t("crostata")}
                 color="var(--orange-color)"
                 width="40vw"
                 goToScreen="scelta-crostata"
               />
               <Banner
                 type="text"
-                label="GIRELLA"
+                label={t("girella")}
                 color="var(--yellow-color)"
                 width="40vw"
                 goToScreen="scelta-girella"
@@ -306,7 +309,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          CROSTATA
+          {t("crostata")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -324,7 +327,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          GIRELLA
+          {t("girella")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -342,7 +345,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          CROISSANT FRITTI
+          {t("croissant_fritti")}
         </div>
         <div
           style={{

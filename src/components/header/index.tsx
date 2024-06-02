@@ -4,6 +4,7 @@ import { Screen } from "../../types";
 import { useMyStore } from "../../StoreProvider";
 import { MapScreens } from "../../const";
 import { LabelGluenFree } from "./LabelGluenFree";
+import { useTranslation } from "../../i18n";
 
 interface Props {
   showHome: boolean;
@@ -14,6 +15,7 @@ interface Props {
 
 const Header: Component<Props> = (props) => {
   const { myStore, setScreen, setLang } = useMyStore();
+  const { t } = useTranslation();
 
   return (
     <header class={styles.container}>
@@ -55,7 +57,7 @@ const Header: Component<Props> = (props) => {
             }
           >
             <img src="/icons/icon_back.png" width={64} />
-            <span>{myStore().screen.prev?.label}</span>
+            <span>{t(myStore().screen.prev?.label as string)}</span>
           </div>
         </Show>
       </div>
@@ -93,7 +95,7 @@ const Header: Component<Props> = (props) => {
               width={64}
               class={styles.nextArrow}
             />
-            <span>{myStore().screen.next?.label}</span>
+            <span>{t(myStore().screen.next?.label as string)}</span>
           </div>
         </Show>
       </div>

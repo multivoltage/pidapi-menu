@@ -50,7 +50,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "piada-verdure",
-      label: "VERDURE",
+      label: "verdure",
     },
   },
 
@@ -75,7 +75,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "scelta-girella",
-      label: "GIRELLA",
+      label: "girella",
     },
   },
   "piada-dolce": {
@@ -89,7 +89,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "piada-formaggi",
-      label: "FORMAGGI",
+      label: "formaggi",
     },
   },
   "piada-formaggi": {
@@ -103,7 +103,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "piada-affettati",
-      label: "AFFETTATI",
+      label: "affettati",
     },
   },
   "piada-verdure": {
@@ -117,7 +117,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "piada-dolce",
-      label: "DOLCI",
+      label: "dolci",
     },
   },
   "scelta-girella": {
@@ -131,7 +131,7 @@ export const MapScreens: MappingScreens = {
     },
     next: {
       goToScreen: "scelta-crostata",
-      label: "CROSTATA",
+      label: "crostata",
     },
   },
   "scelta-crostata": {
@@ -150,57 +150,57 @@ export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
 
 export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   {
-    label: "PROSCIUTTO CRUDO",
+    label: "prosciutto_crudo",
     urlImage: "/images/prosciutto_crudo.jpg",
   },
   {
-    label: "SALAME",
+    label: "salame",
     urlImage: "/images/salame.jpg",
   },
   {
-    label: "PROSCIUTTO COTTO",
+    label: "prosciutto_cotto",
     urlImage: "/images/cotto.jpg",
   },
 ];
 
 export const ITEMS_PIADA_VERDURE: AlternateListProps["list"] = [
   {
-    label: "MISTICANZA",
+    label: "misticanza",
     urlImage: "/images/misticanza.jpg",
   },
   {
-    label: "RUCOLA",
+    label: "rucola",
     urlImage: "/images/rucola.webp",
   },
   {
-    label: "POMODORINI",
+    label: "pomodorini",
     urlImage: "/images/pomodorini.jpg",
   },
   {
-    label: "MELANZANE",
+    label: "melanzane",
     urlImage: "/images/melanzane.jpg",
   },
   {
-    label: "CIPOLLA ROSSA",
+    label: "cipolla_rossa",
     urlImage: "/images/cipolla-rossa.webp",
   },
   {
-    label: "CIPOLLA FRITTA",
+    label: "cipolla_fritta",
     urlImage: "/images/cipolla-fritta.jpg",
   },
 ];
 
 export const ITEMS_PIADA_FORMAGGI: AlternateListProps["list"] = [
   {
-    label: "SQUACCHERONE",
+    label: "squaccherone",
     urlImage: "/images/squccherone.webp",
   },
   {
-    label: "PECORINO",
+    label: "pecorino",
     urlImage: "/images/pecorino.jpg",
   },
   {
-    label: "STRACCIATELLA",
+    label: "stracciatella",
     urlImage: "/images/stracciatella.jpg",
   },
 ];
@@ -267,21 +267,21 @@ export const ITEMS_GIRELLA: AlternateListProps["list"] = [
 
 export const ITEMS_TOPPING: AlternateListProps["list"] = [
   {
-    label: "CIOCCOLATO",
+    label: "cioccolato",
   },
   {
-    label: "GRANELLA DI NOCCIOLA",
+    label: "granella_di_nocciola",
   },
   {
-    label: "CIOCCOLATO BIANCO",
+    label: "cioccolato_bianco",
   },
   {
-    label: "COCCO",
+    label: "cocco",
   },
   {
-    label: "CREMA DI PISTACCHIO",
+    label: "crema_di_pistacchio",
   },
   {
-    label: "GRANELLA DI PISTACCHIO",
+    label: "granella_di_pistacchio",
   },
 ];

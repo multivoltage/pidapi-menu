@@ -1,5 +1,6 @@
 import { Index, type Component } from "solid-js";
 import { Banner } from "../Banner";
+import { useTranslation } from "../../i18n";
 
 export interface Props {
   color: string;
@@ -14,6 +15,7 @@ export const AlternateList: Component<Props> = ({
   bannerWidth,
   negativeOffsetRow,
 }) => {
+  const { t } = useTranslation();
   return (
     <Index each={list}>
       {(item, i) => (
@@ -44,7 +46,7 @@ export const AlternateList: Component<Props> = ({
               "text-align": i % 2 === 0 ? "left" : "right",
             }}
           >
-            {item().label}
+            {t(item().label)}
           </span>
 
           <span
