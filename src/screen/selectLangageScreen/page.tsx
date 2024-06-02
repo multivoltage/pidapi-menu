@@ -1,15 +1,17 @@
 import type { Component } from "solid-js";
 import styles from "./screen.module.css";
-import { useMyStore } from "../../StoreProvider";
+import { playAudio, useMyStore } from "../../StoreProvider";
 import { MapScreens } from "../../const";
 
 const Screen: Component = () => {
   const { setMyStore } = useMyStore();
+
   return (
     <div class={styles.container}>
       <div
         class={styles.flag}
         onClick={() => {
+          playAudio();
           setMyStore(() => ({
             lang: "it",
             screen: MapScreens["home"],
@@ -23,6 +25,7 @@ const Screen: Component = () => {
       <div
         class={styles.flag}
         onClick={() => {
+          playAudio();
           setMyStore(() => ({
             lang: "en",
             screen: MapScreens["home"],

@@ -14,6 +14,7 @@ function useProviderValue() {
   });
 
   function setScreen(screen: Screen) {
+    playAudio();
     setMyStore(() => ({
       screen,
       lang: myStore().lang,
@@ -21,6 +22,7 @@ function useProviderValue() {
   }
 
   function setLang(lang: Lang) {
+    playAudio();
     setMyStore(() => ({
       screen: myStore().screen,
       lang,
@@ -48,4 +50,9 @@ export function useMyStore() {
     throw new Error(`useMyStore must be used within a MyStoreProvider`);
   }
   return context;
+}
+
+export function playAudio() {
+  const audio = new Audio("/audio/change_page.mp3");
+  audio.play();
 }
