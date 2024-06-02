@@ -16,6 +16,7 @@ import {
   ITEMS_PIADA_FORMAGGI,
   ITEMS_PIADA_VERDURE,
   ITEMS_TOPPING,
+  MapScreens,
 } from "../../const";
 import { useTranslation } from "../../i18n";
 
@@ -27,6 +28,10 @@ const banner3 = HOME_SCREEN_ASSETS[2];
 export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
   const { t } = useTranslation();
 
+  const color = MapScreens["scelta-cappelletti"].color
+    .replace("var(", "")
+    .replace(")", "");
+  debugger;
   return (
     <div class={styles.container}>
       <Show when={props.screen.screenName === "home"}>
@@ -49,6 +54,14 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 url={banner1.url}
                 width="40vw"
                 goToScreen={banner1.goToScreen}
+                topLabel={{
+                  label: t("piada_farcita"),
+                  color: getComputedStyle(document.body).getPropertyValue(
+                    MapScreens["scelta-piada"].color
+                      .replace("var(", "")
+                      .replace(")", "")
+                  ),
+                }}
               />
             </div>
             <div
@@ -56,6 +69,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 display: "flex",
                 "justify-content": "center",
                 gap: "3rem",
+                "margin-top": "2rem",
               }}
             >
               <Banner
@@ -63,12 +77,28 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 url={banner2.url}
                 width="40vw"
                 goToScreen={banner2.goToScreen}
+                topLabel={{
+                  label: t("cappelletti_fritti"),
+                  color: getComputedStyle(document.body).getPropertyValue(
+                    MapScreens["scelta-cappelletti"].color
+                      .replace("var(", "")
+                      .replace(")", "")
+                  ),
+                }}
               />
               <Banner
                 type="img"
                 url={banner3.url}
                 width="40vw"
                 goToScreen={banner3.goToScreen}
+                topLabel={{
+                  label: t("scelta_dolci"),
+                  color: getComputedStyle(document.body).getPropertyValue(
+                    MapScreens["scelta-croissant"].color
+                      .replace("var(", "")
+                      .replace(")", "")
+                  ),
+                }}
               />
             </div>
           </div>

@@ -42,6 +42,7 @@ const dictionary: LabelsDictionary = {
     granella_di_pistacchio: "GRANELLA DI PISTACCHIO",
     croissant_fritti: "CROISSANT FRITTI",
     piada_dolce: "PIADA DOLCE",
+    piada_farcita: "PIADA FARCITA",
   },
   en: {
     header_senza_glutine: "ALL GLUTEEN FREE",
@@ -75,6 +76,7 @@ const dictionary: LabelsDictionary = {
     granella_di_pistacchio: "CHOPPED PISTACHIO",
     croissant_fritti: "FRIED CROISSANTS",
     piada_dolce: "SWEET PIADA",
+    piada_farcita: "STUFFED PIADA",
   },
 };
 

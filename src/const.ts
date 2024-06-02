@@ -56,7 +56,7 @@ export const MapScreens: MappingScreens = {
 
   "scelta-croissant": {
     screenName: "scelta-croissant",
-    color: "var(--red-color)",
+    color: "var(--orange-color)",
     showHomeIcon: false,
     title: "",
     prev: {

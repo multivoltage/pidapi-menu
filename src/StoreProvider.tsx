@@ -10,7 +10,7 @@ import { MapScreens } from "./const";
 function useProviderValue() {
   const [myStore, setMyStore] = createSignal<MyStore>({
     lang: "it",
-    screen: MapScreens["langage-screen"],
+    screen: MapScreens["home"],
   });
 
   function setScreen(screen: Screen) {
