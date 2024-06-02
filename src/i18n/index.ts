@@ -18,7 +18,7 @@ const dictionary: LabelsDictionary = {
     affettati: "AFFETTATI",
     verdure: "VERDURE",
     formaggi: "FORMAGGI",
-    dolci: "DOLCI",
+    scelta_dolci: "SCELTA DOLCI",
     prosciutto_crudo: "PROSCIUTTO CRUDO",
     salame: "SALAME",
     prosciutto_cotto: "PROSCIUTTO COTTO",
@@ -41,6 +41,7 @@ const dictionary: LabelsDictionary = {
     crema_di_pistacchio: "CREMA DI PISTACCHIO",
     granella_di_pistacchio: "GRANELLA DI PISTACCHIO",
     croissant_fritti: "CROISSANT FRITTI",
+    piada_dolce: "PIADA DOLCE",
   },
   en: {
     header_senza_glutine: "ALL GLUTEEN FREE",
@@ -50,7 +51,7 @@ const dictionary: LabelsDictionary = {
     affettati: "COLD CUTS",
     verdure: "VEGETABLE",
     formaggi: "CHEESES",
-    dolci: "DESSERT",
+    scelta_dolci: "DESSERT",
     prosciutto_crudo: "CURED HAM",
     salame: "SALAMI",
     prosciutto_cotto: "HAM STEACK",
@@ -73,6 +74,7 @@ const dictionary: LabelsDictionary = {
     crema_di_pistacchio: "PISTACHIO CREAM",
     granella_di_pistacchio: "CHOPPED PISTACHIO",
     croissant_fritti: "FRIED CROISSANTS",
+    piada_dolce: "SWEET PIADA",
   },
 };
 

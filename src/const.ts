@@ -66,7 +66,7 @@ export const MapScreens: MappingScreens = {
   },
   "croissant-fritti": {
     screenName: "croissant-fritti",
-    color: "var(--yellow-color)",
+    color: "var(--orange-light-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -122,7 +122,7 @@ export const MapScreens: MappingScreens = {
   },
   "scelta-girella": {
     screenName: "scelta-girella",
-    color: "red",
+    color: "var(--yellow-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -136,7 +136,7 @@ export const MapScreens: MappingScreens = {
   },
   "scelta-crostata": {
     screenName: "scelta-crostata",
-    color: " --orange-color",
+    color: "var(--orange-color)",
     showHomeIcon: false,
     title: "",
     prev: {
