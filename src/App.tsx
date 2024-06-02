@@ -41,12 +41,12 @@ const App: Component = () => {
       <Show when={myStore().screen.screenName !== "langage-screen"}>
         <AllScrren screen={myStore().screen} />
       </Show>
-
+      {/* 
       {!import.meta.env.PROD && (
         <div class={styles.debug}>
           <pre>{JSON.stringify(myStore(), null, "\t")}</pre>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

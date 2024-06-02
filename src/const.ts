@@ -264,3 +264,24 @@ export const ITEMS_GIRELLA: AlternateListProps["list"] = [
     label: "",
   },
 ];
+
+export const ITEMS_TOPPING: AlternateListProps["list"] = [
+  {
+    label: "CIOCCOLATO",
+  },
+  {
+    label: "GRANELLA DI NOCCIOLA",
+  },
+  {
+    label: "CIOCCOLATO BIANCO",
+  },
+  {
+    label: "COCCO",
+  },
+  {
+    label: "CREMA DI PISTACCHIO",
+  },
+  {
+    label: "GRANELLA DI PISTACCHIO",
+  },
+];

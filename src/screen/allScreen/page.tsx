@@ -1,4 +1,4 @@
-import { For, Show, type Component } from "solid-js";
+import { For, Index, Show, type Component } from "solid-js";
 import styles from "./screen.module.css";
 import { MyStore } from "../../types";
 import { Banner } from "../../components/Banner";
@@ -15,6 +15,7 @@ import {
   ITEMS_PIADA_DOLCE,
   ITEMS_PIADA_FORMAGGI,
   ITEMS_PIADA_VERDURE,
+  ITEMS_TOPPING,
 } from "../../const";
 
 // banners home
@@ -351,8 +352,12 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
-          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
-          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
+          <Banner type="img" url="/images/brioche_cioccolato.jpg" width="30%" />
+          <Banner
+            type="img"
+            url="/images/brioche_senza_niente.jpg"
+            width="30%"
+          />
         </div>
 
         <div
@@ -362,6 +367,48 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           }}
         >
           TOPPINGS
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            "grid-template-columns": "repeat(2, 1fr)",
+            "grid-template-rows": "repeat(3, 1fr)",
+            "grid-column-gap": "0px",
+            "grid-row-gap": "0px",
+            "row-gap": "2rem",
+            width: "90%",
+          }}
+        >
+          <Index each={ITEMS_TOPPING}>
+            {(item) => (
+              <div
+                style={{
+                  "margin-top": "2rem",
+                  display: "flex",
+                  "justify-content": "space-between",
+                  "align-items": "center",
+                  overflow: "auto",
+                  height: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    flex: "0.5",
+                  }}
+                >
+                  <Banner width="100%" type="img" url="#" />
+                </div>
+                <span
+                  style={{
+                    flex: 1,
+                  }}
+                >
+                  {item().label}
+                </span>
+              </div>
+            )}
+          </Index>
         </div>
       </Show>
     </div>
