@@ -255,6 +255,14 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
 
       <Show when={props.screen.screenName === "scelta-croissant"}>
         <div
+          class={styles.bigTitle}
+          style={{
+            color: props.screen.color,
+          }}
+        >
+          {t("dolci")}
+        </div>
+        <div
           style={{
             display: "flex",
             "align-items": "center",

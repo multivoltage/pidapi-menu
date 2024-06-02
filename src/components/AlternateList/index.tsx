@@ -4,7 +4,11 @@ import { useTranslation } from "../../i18n";
 
 export interface Props {
   color: string;
-  list: Array<{ label: string; urlImage?: string }>;
+  list: Array<{
+    label: string;
+    urlImage?: string;
+    objectFit?: "cover" | "contain";
+  }>;
   bannerWidth: string;
   negativeOffsetRow?: string;
 }
@@ -38,6 +42,7 @@ export const AlternateList: Component<Props> = ({
             width={bannerWidth}
             type="img"
             url={item().urlImage || "https://placehold.co/800x800"}
+            objectFit={item().objectFit}
           />
 
           <span

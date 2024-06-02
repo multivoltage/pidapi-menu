@@ -234,6 +234,7 @@ export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
   {
     label: "",
     urlImage: "/images/cappelletto_singolo.jpg",
+    objectFit: "contain",
   },
   {
     label: "",

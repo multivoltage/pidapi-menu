@@ -8,6 +8,7 @@ type Props = { width: string; goToScreen?: Screen["screenName"] } & (
   | {
       type: "img";
       url: string;
+      objectFit?: "cover" | "contain";
     }
   | {
       type: "text";
@@ -29,7 +30,15 @@ export const Banner: Component<Props> = (props) => {
         props.goToScreen ? [setScreen, MapScreens[props.goToScreen]] : undefined
       }
     >
-      {props.type === "img" && <img class={styles.image} src={props.url} />}
+      {props.type === "img" && (
+        <img
+          class={styles.image}
+          src={props.url}
+          style={{
+            "object-fit": props.objectFit || "cover",
+          }}
+        />
+      )}
       {props.type === "text" && (
         <span
           style={{
