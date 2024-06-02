@@ -151,45 +151,57 @@ export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
 export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   {
     label: "PROSCIUTTO CRUDO",
+    urlImage: "/images/prosciutto_crudo.jpg",
   },
   {
     label: "SALAME",
+    urlImage: "/images/salame.jpg",
   },
   {
     label: "PROSCIUTTO COTTO",
+    urlImage: "/images/cotto.jpg",
   },
 ];
 
 export const ITEMS_PIADA_VERDURE: AlternateListProps["list"] = [
   {
     label: "MISTICANZA",
+    urlImage: "/images/misticanza.jpg",
   },
   {
     label: "RUCOLA",
+    urlImage: "/images/rucola.webp",
   },
   {
     label: "POMODORINI",
+    urlImage: "/images/pomodorini.jpg",
   },
   {
     label: "MELANZANE",
+    urlImage: "/images/melanzane.jpg",
   },
   {
     label: "CIPOLLA ROSSA",
+    urlImage: "/images/cipolla-rossa.webp",
   },
   {
     label: "CIPOLLA FRITTA",
+    urlImage: "/images/cipolla-fritta.jpg",
   },
 ];
 
 export const ITEMS_PIADA_FORMAGGI: AlternateListProps["list"] = [
   {
     label: "SQUACCHERONE",
+    urlImage: "/images/squccherone.webp",
   },
   {
     label: "PECORINO",
+    urlImage: "/images/pecorino.jpg",
   },
   {
     label: "STRACCIATELLA",
+    urlImage: "/images/stracciatella.jpg",
   },
 ];
 

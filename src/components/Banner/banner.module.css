@@ -15,19 +15,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-.text {
-  animation-name: lampeggio;
-  animation-iteration-count: infinite;
-  animation-duration: .5s;
-  animation-direction: alternate;
-}
-
-@keyframes lampeggio{
-  0%{
-    transform: scale(0.9);
-  }
-  100%{
-    transform: scale(1.2);
-  }
-}

@@ -21,7 +21,7 @@ code {
 :root {
   --header-height: 15vh;
   --content-height: 85vh;
-  --green-color: rgb(30, 32, 30);
+  --green-color: rgb(6, 211, 0);
   --red-color: rgb(255,2,0);
   --orange-color: rgb(237,105,45);
   --orange-light-color: rgb(225,143,0);
@@ -30,3 +30,19 @@ code {
   --yellow-color: rgb(255,221,79);
 }
 /** end variables **/
+
+.lampeggio {
+  animation-name: lampeggio;
+  animation-iteration-count: infinite;
+  animation-duration: .5s;
+  animation-direction: alternate;
+}
+
+@keyframes lampeggio{
+  0%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1.2);
+  }
+}
