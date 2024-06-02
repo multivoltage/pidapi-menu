@@ -31,7 +31,7 @@ export const MapScreens: MappingScreens = {
   },
   "scelta-piada": {
     screenName: "scelta-piada",
-    color: "red",
+    color: "var(--red-color)",
     showHomeIcon: false,
     title: "",
     prev: {
@@ -56,7 +56,7 @@ export const MapScreens: MappingScreens = {
 
   "scelta-croissant": {
     screenName: "scelta-croissant",
-    color: "red",
+    color: "var(--red-color)",
     showHomeIcon: false,
     title: "",
     prev: {
