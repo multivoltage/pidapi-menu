@@ -13,20 +13,22 @@ export const LabelGluenFree: Component<Props> = (props) => {
 
   return (
     <>
-      <Show when={props.showAllLabelGlutenFree}>
-        <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-        <span class={styles.labelGlutenFee}>{" - "}</span>
-        <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
-      </Show>
-
-      <Show when={!props.showAllLabelGlutenFree}>
-        <Show when={myStore().lang === "it"}>
+      <div class="lampeggio">
+        <Show when={props.showAllLabelGlutenFree}>
           <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
-        </Show>
-        <Show when={myStore().lang === "en"}>
+          <span class={styles.labelGlutenFee}>{" - "}</span>
           <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
         </Show>
-      </Show>
+
+        <Show when={!props.showAllLabelGlutenFree}>
+          <Show when={myStore().lang === "it"}>
+            <span class={styles.labelGlutenFee}>TUTTO SENZA GLUTINE</span>
+          </Show>
+          <Show when={myStore().lang === "en"}>
+            <span class={styles.labelGlutenFee}>ALL GLUTEN FREE</span>
+          </Show>
+        </Show>
+      </div>
     </>
   );
 };

@@ -38,7 +38,7 @@ code {
   animation-direction: alternate;
 }
 
-@keyframes lampeggio{
+@keyframes lampeggio {
   0%{
     transform: scale(0.9);
   }

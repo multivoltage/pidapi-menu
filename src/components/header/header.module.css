@@ -13,6 +13,7 @@
 .labelGlutenFee {
     color: var(--red-color);
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .navigationButton {
