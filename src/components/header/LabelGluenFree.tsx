@@ -17,9 +17,13 @@ export const LabelGluenFree: Component<Props> = (props) => {
     <>
       <div class="lampeggio">
         <Show when={props.showAllLabelGlutenFree}>
-          <span class={styles.labelGlutenFee}>{t("header_senza_glutine")}</span>
+          <span class={styles.labelGlutenFee}>
+            {t("header_senza_glutine", "it")}
+          </span>
           <span class={styles.labelGlutenFee}>{" - "}</span>
-          <span class={styles.labelGlutenFee}>{t("header_senza_glutine")}</span>
+          <span class={styles.labelGlutenFee}>
+            {t("header_senza_glutine", "en")}
+          </span>
         </Show>
 
         <Show when={!props.showAllLabelGlutenFree}>
