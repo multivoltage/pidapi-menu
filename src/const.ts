@@ -116,8 +116,8 @@ export const MapScreens: MappingScreens = {
       label: "",
     },
     next: {
-      goToScreen: "piada-dolce",
-      label: "dolci",
+      goToScreen: "piada-formaggi",
+      label: "formaggi",
     },
   },
   "scelta-girella": {
@@ -274,20 +274,35 @@ export const ITEMS_GIRELLA: AlternateListProps["list"] = [
 export const ITEMS_TOPPING: AlternateListProps["list"] = [
   {
     label: "cioccolato",
+    urlImage: "/images/cioccolato.jpg",
   },
   {
     label: "granella_di_nocciola",
+    urlImage: "/images/granella_nocciole.jpg",
   },
   {
     label: "cioccolato_bianco",
+    urlImage: "/images/cioccolato_bianco.jpg",
   },
   {
     label: "cocco",
+    urlImage: "/images/cocco.jpg",
   },
   {
     label: "crema_di_pistacchio",
+    urlImage: "/images/crema_pistacchio.jpg",
   },
   {
     label: "granella_di_pistacchio",
+    urlImage: "/images/granella_pistacchio.jpg",
+  },
+  //
+  {
+    label: "granella_di_pistacchio",
+    urlImage: "/images/granella_pistacchio.jpg",
+  },
+  {
+    label: "granella_di_pistacchio",
+    urlImage: "/images/granella_pistacchio.jpg",
   },
 ];

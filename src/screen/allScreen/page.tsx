@@ -388,13 +388,13 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             width: "90%",
           }}
         >
-          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
-          <Banner type="img" url="/images/brioche_cioccolato.jpg" width="30%" />
           <Banner
             type="img"
             url="/images/brioche_senza_niente.jpg"
             width="30%"
           />
+          <Banner type="img" url="/images/brioche_solo_velo.jpg" width="30%" />
+          <Banner type="img" url="/images/brioche_cioccolato.jpg" width="30%" />
         </div>
 
         <div
@@ -434,14 +434,19 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                     flex: "0.5",
                   }}
                 >
-                  <Banner width="100%" type="img" url="#" />
+                  <Banner
+                    width="100%"
+                    type="img"
+                    url={item().urlImage as string}
+                  />
                 </div>
                 <span
                   style={{
                     flex: 1,
+                    "font-size": "2rem",
                   }}
                 >
-                  {item().label}
+                  {t(item().label)}
                 </span>
               </div>
             )}
