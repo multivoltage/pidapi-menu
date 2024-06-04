@@ -13,10 +13,6 @@ export const MapScreens: MappingScreens = {
     color: "white",
     showHomeIcon: false,
     title: "home",
-    prev: {
-      goToScreen: "langage-screen",
-      label: "",
-    },
   },
 
   "scelta-cappelletti": {
@@ -27,6 +23,10 @@ export const MapScreens: MappingScreens = {
     prev: {
       goToScreen: "home",
       label: "",
+    },
+    next: {
+      goToScreen: "scelta-piada",
+      label: "piada_farcita",
     },
   },
   "scelta-piada": {
@@ -70,12 +70,12 @@ export const MapScreens: MappingScreens = {
     showHomeIcon: false,
     title: "",
     prev: {
-      goToScreen: "scelta-croissant",
+      goToScreen: "home",
       label: "",
     },
     next: {
-      goToScreen: "scelta-girella",
-      label: "girella",
+      goToScreen: "scelta-cappelletti",
+      label: "cappelletti_fritti",
     },
   },
   "piada-dolce": {
@@ -291,15 +291,6 @@ export const ITEMS_TOPPING: AlternateListProps["list"] = [
   {
     label: "crema_di_pistacchio",
     urlImage: "/images/crema_pistacchio.jpg",
-  },
-  {
-    label: "granella_di_pistacchio",
-    urlImage: "/images/granella_pistacchio.jpg",
-  },
-  //
-  {
-    label: "granella_di_pistacchio",
-    urlImage: "/images/granella_pistacchio.jpg",
   },
   {
     label: "granella_di_pistacchio",

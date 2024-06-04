@@ -16,6 +16,6 @@ export const HOME_SCREEN_ASSETS: Array<
   {
     type: "img",
     url: "/images/brioche_solo_velo.jpg",
-    goToScreen: "scelta-croissant",
+    goToScreen: "croissant-fritti",
   },
 ];

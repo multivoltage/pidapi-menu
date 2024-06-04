@@ -88,9 +88,9 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 width="40vw"
                 goToScreen={banner3.goToScreen}
                 topLabel={{
-                  label: t("scelta_dolci"),
+                  label: t("croissant_fritti"),
                   color: getComputedStyle(document.body).getPropertyValue(
-                    MapScreens["scelta-croissant"].color
+                    MapScreens["croissant-fritti"].color
                       .replace("var(", "")
                       .replace(")", "")
                   ),
@@ -415,6 +415,8 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             "grid-row-gap": "0px",
             "row-gap": "2rem",
             width: "90%",
+            height: "100%",
+            overflow: "scroll",
           }}
         >
           <Index each={ITEMS_TOPPING}>
@@ -425,8 +427,6 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                   display: "flex",
                   "justify-content": "space-between",
                   "align-items": "center",
-                  overflow: "auto",
-                  height: "100%",
                 }}
               >
                 <div
