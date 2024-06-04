@@ -150,7 +150,7 @@ export const MapScreens: MappingScreens = {
   },
 };
 
-export const RESET_TO_LANGUAGE_SELECTOR_TIME = 30 * 1000;
+export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 2 * 1000;
 
 export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   {
