@@ -83,7 +83,9 @@ export const Banner: Component<Props> = (props) => {
   }
 
   createEffect(() => {
-    setupTopLabel();
+    setTimeout(() => {
+      setupTopLabel();
+    }, 200);
   });
 
   return (
