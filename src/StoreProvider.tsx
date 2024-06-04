@@ -54,5 +54,9 @@ export function useMyStore() {
 
 export function playAudio() {
   const audio = new Audio("/audio/change_page.mp3");
-  audio.play();
+  try {
+    audio.play();
+  } catch (e) {
+    console.error(e);
+  }
 }
