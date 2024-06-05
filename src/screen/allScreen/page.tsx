@@ -248,12 +248,11 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          {t("dolci")}
+          {t("piada_dolce")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="30%"
-            negativeOffsetRow="0"
             list={ITEMS_PIADA_DOLCE}
             color={props.screen.color}
           />

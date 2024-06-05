@@ -180,10 +180,10 @@ export const ITEMS_PIADA_VERDURE: AlternateListProps["list"] = [
     label: "pomodorini",
     urlImage: "/images/pomodorini.jpg",
   },
-  {
-    label: "melanzane",
-    urlImage: "/images/melanzane.jpg",
-  },
+  // {
+  //   label: "melanzane",
+  //   urlImage: "/images/melanzane.jpg",
+  // },
   {
     label: "cipolla_rossa",
     urlImage: "/images/cipolla-rossa.webp",
