@@ -88,8 +88,8 @@ export const MapScreens: MappingScreens = {
       label: "",
     },
     next: {
-      goToScreen: "piada-formaggi",
-      label: "formaggi",
+      goToScreen: "piada-affettati",
+      label: "affettati",
     },
   },
   "piada-formaggi": {
@@ -102,8 +102,8 @@ export const MapScreens: MappingScreens = {
       label: "",
     },
     next: {
-      goToScreen: "piada-affettati",
-      label: "affettati",
+      goToScreen: "piada-dolce",
+      label: "piade_dolci",
     },
   },
   "piada-verdure": {

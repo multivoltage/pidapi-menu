@@ -44,6 +44,7 @@ const dictionary: LabelsDictionary = {
     piada_dolce: "PIADA DOLCE",
     piada_farcita: "PIADA FARCITA",
     nutella: "NUTELLA",
+    piade_dolci: "PIADE DOLCI",
   },
   en: {
     header_senza_glutine: "ALL GLUTEEN FREE",
@@ -79,6 +80,7 @@ const dictionary: LabelsDictionary = {
     piada_dolce: "SWEET PIADA",
     piada_farcita: "STUFFED PIADA",
     nutella: "NUTELLA",
+    piade_dolci: "SWEET PIADINA",
   },
 };
 
