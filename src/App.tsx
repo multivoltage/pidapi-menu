@@ -39,10 +39,13 @@ function createTimer(ms: number, onEnd: () => void) {
 
 const App: Component = () => {
   const { myStore, setScreen } = useMyStore();
-  const { restart } = createTimer(RESET_TO_LANGUAGE_SELECTOR_TIME_MS, () => {
-    console.log("xxx go language");
-    setScreen(MapScreens["langage-screen"]);
-  });
+  const { restart } = createTimer(
+    import.meta.env.PROD ? RESET_TO_LANGUAGE_SELECTOR_TIME_MS : 99999999,
+    () => {
+      console.log("xxx go language");
+      setScreen(MapScreens["langage-screen"]);
+    }
+  );
 
   onMount(() => {
     restart();

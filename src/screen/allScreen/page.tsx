@@ -126,9 +126,12 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="var(--orange-color)"
-                label={t("affettati")}
-                type="text"
+                centerLabel={{
+                  label: t("affettati"),
+                  color: "var(--orange-color)",
+                }}
+                url="/images/prosciutto_crudo.jpg"
+                type="img-with-label"
                 width="30vw"
                 goToScreen="piada-affettati"
               />
@@ -141,9 +144,12 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="var(--green-color)"
-                label={t("verdure")}
-                type="text"
+                centerLabel={{
+                  label: t("verdure"),
+                  color: "var(--green-color)",
+                }}
+                url="/images/misticanza.jpg"
+                type="img-with-label"
                 width="30vw"
                 goToScreen="piada-verdure"
               />
@@ -175,9 +181,12 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="var(--blue-color)"
-                label={t("formaggi")}
-                type="text"
+                type="img-with-label"
+                centerLabel={{
+                  color: "var(--blue-color)",
+                  label: t("formaggi"),
+                }}
+                url="/images/squccherone.webp"
                 width="30vw"
                 goToScreen="piada-formaggi"
               />

@@ -10,12 +10,17 @@ import { Screen } from "../../types";
 import { useMyStore } from "../../StoreProvider";
 import { MapScreens } from "../../const";
 
-type Props = { width: string; goToScreen?: Screen["screenName"] } & (
+type Props = {
+  width: string;
+  goToScreen?: Screen["screenName"];
+} & (
   | {
       type: "img";
       url: string;
       objectFit?: "cover" | "contain";
       animationRotate?: boolean;
+
+      label?: string;
       topLabel?: {
         label: string;
         color: string;
@@ -25,6 +30,14 @@ type Props = { width: string; goToScreen?: Screen["screenName"] } & (
       type: "text";
       label: string;
       color: string;
+    }
+  | {
+      type: "img-with-label";
+      url: string;
+      centerLabel: {
+        label: string;
+        color: string;
+      };
     }
 );
 
@@ -94,6 +107,7 @@ export const Banner: Component<Props> = (props) => {
       class={styles.container}
       classList={{
         [styles.container]: true,
+        [styles["filigrana"]]: props.type === "img-with-label",
         "rotazione-loop": props.type === "img" && !!props.animationRotate,
       }}
       style={{
@@ -139,6 +153,44 @@ export const Banner: Component<Props> = (props) => {
         >
           {props.label}
         </span>
+      )}
+
+      {props.type === "img-with-label" && (
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <img
+            class={styles.image}
+            src={props.url}
+            style={{
+              "object-fit": "cover",
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              display: "flex",
+              "justify-content": "center",
+              "align-items": "center",
+            }}
+          >
+            <span
+              style={{
+                color: props.centerLabel.color,
+              }}
+              class="lampeggio"
+            >
+              {props.centerLabel.label}
+            </span>
+          </div>
+        </div>
       )}
     </div>
   );
