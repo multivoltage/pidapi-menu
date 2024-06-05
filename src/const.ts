@@ -150,7 +150,7 @@ export const MapScreens: MappingScreens = {
   },
 };
 
-export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 2 * 1000;
+export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 20 * 1000;
 
 export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   {
@@ -211,22 +211,28 @@ export const ITEMS_PIADA_FORMAGGI: AlternateListProps["list"] = [
 
 export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
   {
-    label: "NUTELLA",
+    label: "nutella",
+    urlImage: "/images/nutella.jpg",
   },
   {
-    label: "CIOCCOLATO BIANCO",
+    label: "cioccolato_bianco",
+    urlImage: "/images/cioccolato_bianco.jpg",
   },
   {
-    label: "CREMA DI PISTACCHIO",
+    label: "crema_di_pistacchio",
+    urlImage: "/images/crema_pistacchio.jpg",
   },
   {
-    label: "COCCO",
+    label: "cocco",
+    urlImage: "/images/cocco.jpg",
   },
   {
-    label: "GRANELLA NOCCIOLE",
+    label: "granella_di_nocciola",
+    urlImage: "/images/granella_nocciole.jpg",
   },
   {
-    label: "GRANELLA PISTACCIO",
+    label: "granella_di_pistacchio",
+    urlImage: "/images/granella_pistacchio.jpg",
   },
 ];
 

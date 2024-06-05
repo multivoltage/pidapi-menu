@@ -90,12 +90,12 @@ const Header: Component<Props> = (props) => {
               )
             }
           >
+            <span>{t(myStore().screen.next?.label as string)}</span>
             <img
               src="/icons/icon_back.png"
               width={64}
               class={styles.nextArrow}
             />
-            <span>{t(myStore().screen.next?.label as string)}</span>
           </div>
         </Show>
       </div>

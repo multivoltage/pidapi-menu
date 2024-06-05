@@ -43,6 +43,7 @@ const dictionary: LabelsDictionary = {
     croissant_fritti: "CROISSANT FRITTI",
     piada_dolce: "PIADA DOLCE",
     piada_farcita: "PIADA FARCITA",
+    nutella: "NUTELLA",
   },
   en: {
     header_senza_glutine: "ALL GLUTEEN FREE",
@@ -77,6 +78,7 @@ const dictionary: LabelsDictionary = {
     croissant_fritti: "FRIED CROISSANTS",
     piada_dolce: "SWEET PIADA",
     piada_farcita: "STUFFED PIADA",
+    nutella: "NUTELLA",
   },
 };
 
