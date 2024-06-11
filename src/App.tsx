@@ -67,7 +67,7 @@ const App: Component = () => {
         <AllScrren screen={myStore().screen} />
       </Show>
 
-      {!import.meta.env.PROD && (
+      {import.meta.env.DEV && (
         <div class={styles.debug}>
           <pre>{JSON.stringify(myStore(), null, "\t")}</pre>
         </div>

@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
+import { defineConfig } from "vite";
+import solidPlugin from "vite-plugin-solid";
+import { VitePWA } from "vite-plugin-pwa";
 // import devtools from 'solid-devtools/vite';
 
 export default defineConfig({
@@ -10,11 +11,16 @@ export default defineConfig({
     */
     // devtools(),
     solidPlugin(),
+    VitePWA({
+      manifest: {
+        theme_color: "#ffffff",
+      },
+    }),
   ],
   server: {
     port: 3000,
   },
   build: {
-    target: 'esnext',
+    target: "esnext",
   },
 });
