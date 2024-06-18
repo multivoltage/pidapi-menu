@@ -18,6 +18,7 @@ export default defineConfig({
       manifest: {
         theme_color: "#ffffff",
       },
+      registerType: "autoUpdate",
       includeAssets: ["images/*.png", "images/*.jpg", "images/*.webp"],
     }),
   ],
