@@ -15,6 +15,7 @@ export default defineConfig({
       manifest: {
         theme_color: "#ffffff",
       },
+      includeAssets: ["images/*.png", "images/*.jpg", "images/*.webp"],
     }),
   ],
   server: {
