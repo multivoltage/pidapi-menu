@@ -12,6 +12,9 @@ export default defineConfig({
     // devtools(),
     solidPlugin(),
     VitePWA({
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,jpg,png,svg,webmanifest}"],
+      },
       manifest: {
         theme_color: "#ffffff",
       },
