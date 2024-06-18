@@ -13,13 +13,20 @@ export default defineConfig({
     solidPlugin(),
     VitePWA({
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,jpg,png,svg,webmanifest}"],
+        globPatterns: [
+          "**/*.{js,css,html,ico,jpg,png,svg,webp,mp3,webmanifest}",
+        ],
       },
       manifest: {
         theme_color: "#ffffff",
       },
       registerType: "autoUpdate",
-      includeAssets: ["images/*.png", "images/*.jpg", "images/*.webp"],
+      includeAssets: [
+        "images/*.png",
+        "images/*.jpg",
+        "images/*.webp",
+        "audio/*.mp3",
+      ],
     }),
   ],
   server: {
