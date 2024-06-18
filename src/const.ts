@@ -38,6 +38,10 @@ export const MapScreens: MappingScreens = {
       goToScreen: "home",
       label: "",
     },
+    next: {
+      goToScreen: "croissant-fritti",
+      label: "croissant_fritti",
+    },
   },
   "piada-affettati": {
     screenName: "piada-affettati",
@@ -150,7 +154,7 @@ export const MapScreens: MappingScreens = {
   },
 };
 
-export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 20 * 1000;
+export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 1 * 60 * 1000;
 
 export const ITEMS_PIADA_AFFETTATI: AlternateListProps["list"] = [
   {
@@ -215,6 +219,10 @@ export const ITEMS_PIADA_DOLCE: AlternateListProps["list"] = [
     urlImage: "/images/nutella.jpg",
   },
   {
+    label: "marmellata_pere",
+    urlImage: "/images/marmellata_pere.jpg",
+  },
+  {
     label: "cioccolato_bianco",
     urlImage: "/images/cioccolato_bianco.jpg",
   },
@@ -249,7 +257,7 @@ export const ITEMS_CAPPELLETTI: AlternateListProps["list"] = [
   },
   {
     label: "",
-    urlImage: "/images/cappelletti_stesi.jpg",
+    urlImage: "/images/cappelletti_coppia.jpg",
   },
 ];
 

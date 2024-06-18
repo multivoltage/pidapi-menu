@@ -43,7 +43,6 @@ type Props = {
 
 export const Banner: Component<Props> = (props) => {
   const { setScreen } = useMyStore();
-
   const idCanvas = `${props.type}-${props.goToScreen}-${props.width}`;
   let container!: HTMLDivElement;
 
@@ -67,10 +66,13 @@ export const Banner: Component<Props> = (props) => {
 
     /* It will change the style and appearance 
         of the text to make it look more geeky. */
-    context.font = "3rem Caveat";
+    context.font = "4rem Caveat";
+    context.fontKerning = "none";
+    // context.letterSpacing = "rem";
 
     context.fillStyle = props.topLabel?.color || "red";
     context.textAlign = "center";
+    context;
 
     let angle = Math.PI * 0.5; // in radians
     let radius = lato / 2;
@@ -90,15 +92,13 @@ export const Banner: Component<Props> = (props) => {
       context.rotate(angle / string.length);
       context.save();
       context.translate(0, -1 * radius);
-      context.fillText(string[i], 0, 0);
+      context.fillText(string[i], 0, 0, 17);
       context.restore();
     }
   }
 
   createEffect(() => {
-    setTimeout(() => {
-      setupTopLabel();
-    }, 200);
+    setupTopLabel();
   });
 
   return (

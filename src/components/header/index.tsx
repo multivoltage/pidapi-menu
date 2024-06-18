@@ -32,14 +32,14 @@ const Header: Component<Props> = (props) => {
             {myStore().lang === "it" && (
               <img
                 src="/images/bandiera_inglese.png"
-                width={64}
+                width={54}
                 onClick={[setLang, "en"]}
               />
             )}
             {myStore().lang === "en" && (
               <img
                 src="/images/bandiera_italiano.png"
-                width={64}
+                width={54}
                 onClick={[setLang, "it"]}
               />
             )}
@@ -56,7 +56,7 @@ const Header: Component<Props> = (props) => {
               )
             }
           >
-            <img src="/icons/icon_back.png" width={64} />
+            <img src="/icons/icon_back.png" width={42} />
             <span>{t(myStore().screen.prev?.label as string)}</span>
           </div>
         </Show>
@@ -70,7 +70,7 @@ const Header: Component<Props> = (props) => {
         <img
           onClick={() => setScreen(MapScreens["langage-screen"])}
           src="/icons/icon_home.png"
-          width={82}
+          width={54}
         />
       </div>
 
@@ -90,10 +90,12 @@ const Header: Component<Props> = (props) => {
               )
             }
           >
-            <span>{t(myStore().screen.next?.label as string)}</span>
+            <span class={styles.labelNext}>
+              {t(myStore().screen.next?.label as string)}
+            </span>
             <img
               src="/icons/icon_back.png"
-              width={64}
+              width={42}
               class={styles.nextArrow}
             />
           </div>

@@ -51,6 +51,7 @@ export const AlternateList: Component<Props> = ({
             style={{
               "flex-basis": "50%",
               "text-align": i % 2 === 0 ? "left" : "right",
+              "font-size": "2.5rem",
             }}
           >
             {t(item().label)}

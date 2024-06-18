@@ -1,18 +1,10 @@
-import {
-  Show,
-  createEffect,
-  createSignal,
-  onCleanup,
-  onMount,
-  type Component,
-} from "solid-js";
+import { Show, onMount, type Component } from "solid-js";
 
 import styles from "./App.module.css";
 
 // screens
 import ScreenLangSelector from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
-import { Lang } from "./types";
 import { AllScrren } from "./screen/allScreen/page";
 import { MapScreens, RESET_TO_LANGUAGE_SELECTOR_TIME_MS } from "./const";
 import { useMyStore } from "./StoreProvider";

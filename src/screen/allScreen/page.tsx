@@ -103,7 +103,11 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
 
       <Show when={props.screen.screenName === "scelta-piada"}>
         <div>
-          <div>
+          <div
+            style={{
+              "font-size": "2rem",
+            }}
+          >
             <div>{t("piada_piccola")}</div>
             <div>{t("piada_media")}</div>
             <div>{t("piada_grande")}</div>
@@ -113,7 +117,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             style={{
               "margin-top": "1rem",
               position: "relative",
-              width: "90vw",
+              width: "95vw",
               height: "60vh",
             }}
           >
@@ -164,9 +168,12 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               }}
             >
               <Banner
-                color="var(--purple-color)"
-                label={t("piada_dolce")}
-                type="text"
+                centerLabel={{
+                  label: t("piada_dolce"),
+                  color: "var(--purple-color)",
+                }}
+                url="/images/piada_nutella.jpg"
+                type="img-with-label"
                 width="30vw"
                 goToScreen="piada-dolce"
               />
@@ -225,7 +232,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
         <div class={styles.containerAlternateSection}>
           <AlternateList
             bannerWidth="30%"
-            negativeOffsetRow="5rem"
+            negativeOffsetRow="3rem"
             list={ITEMS_PIADA_VERDURE}
             color={props.screen.color}
           />
@@ -275,7 +282,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          {t("cappelletti_fritti")}
+          {t("cappelletti_fritti_page_title")}
         </div>
         <div class={styles.containerAlternateSection}>
           <AlternateList
@@ -387,13 +394,13 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             color: props.screen.color,
           }}
         >
-          {t("croissant_fritti")}
+          {t("croissant_fritti_page_title")}
         </div>
         <div
           style={{
             display: "flex",
             "justify-content": "space-between",
-            width: "90%",
+            width: "95%",
           }}
         >
           <Banner
@@ -422,7 +429,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             "grid-column-gap": "0px",
             "grid-row-gap": "0px",
             "row-gap": "2rem",
-            width: "90%",
+            width: "95%",
             height: "100%",
             overflow: "scroll",
           }}

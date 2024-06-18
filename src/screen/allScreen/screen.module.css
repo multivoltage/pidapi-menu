@@ -9,13 +9,13 @@
 }
 
 .bigTitle {
-  font-size: 5rem;
+  font-size: 3.6rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
 .containerAlternateSection {
-  max-width: 90%;
+  max-width: 95%;
   overflow: auto;
   max-height: 100%;
 }

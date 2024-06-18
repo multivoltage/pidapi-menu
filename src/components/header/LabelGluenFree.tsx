@@ -39,6 +39,9 @@ export const LabelGluenFree: Component<Props> = (props) => {
           </Show>
         </Show>
       </div>
+      <div class={`lampeggio ${styles["labelFattoAMano"]}`}>
+        {t("header_fatto_a_mano")}
+      </div>
     </>
   );
 };
