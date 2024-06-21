@@ -468,6 +468,33 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           </Index>
         </div>
       </Show>
+
+      <Show when={props.screen.screenName === "vedi-info"}>
+        <div
+          style={{
+            display: "flex",
+            "flex-direction": "column",
+            gap: "3rem",
+            margin: "3rem",
+          }}
+        >
+          <img
+            style={{
+              "border-radius": "2rem",
+            }}
+            width="100%"
+            height={"auto"}
+            src="/images/logo_senza_glutine_della_monica.jpg"
+          />
+          <img
+            style={{
+              "border-radius": "2rem",
+            }}
+            width="100%"
+            src="/images/qrcode.jpg"
+          />
+        </div>
+      </Show>
     </div>
   );
 };

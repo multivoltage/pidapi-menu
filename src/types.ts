@@ -22,7 +22,9 @@ export type ScreenName =
   | "scelta-croissant" // pagina 11
   | "croissant-fritti" // pagina 12
   | "scelta-girella" // pagina 13
-  | "scelta-crostata"; // pagina 14
+  | "scelta-crostata" // pagina 14
+  | "vedi-info"
+  | "vedi_preview";
 
 export type Screen = {
   screenName: ScreenName;

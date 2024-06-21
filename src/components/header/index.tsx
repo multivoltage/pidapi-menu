@@ -113,8 +113,12 @@ const Header: Component<Props> = (props) => {
 
       <Show when={myStore().screen.screenName !== "langage-screen"}>
         <div class={styles["actions"]}>
-          <div>{t("vedi_info")}</div>
-          <div>{t("vedi_preview")}</div>
+          <div onClick={() => setScreen(MapScreens["vedi-info"])}>
+            {t("vedi_info")}
+          </div>
+          <div onClick={() => setScreen(MapScreens["vedi_preview"])}>
+            {t("vedi_preview")}
+          </div>
         </div>
       </Show>
     </header>

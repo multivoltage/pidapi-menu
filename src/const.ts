@@ -152,6 +152,26 @@ export const MapScreens: MappingScreens = {
       label: "cappelletti_fritti",
     },
   },
+  "vedi-info": {
+    screenName: "vedi-info",
+    color: "var(--orange-color)",
+    showHomeIcon: true,
+    title: "",
+    prev: {
+      goToScreen: "home",
+      label: "",
+    },
+  },
+  vedi_preview: {
+    screenName: "vedi_preview",
+    color: "var(--orange-color)",
+    showHomeIcon: true,
+    title: "",
+    prev: {
+      goToScreen: "home",
+      label: "",
+    },
+  },
 };
 
 export const RESET_TO_LANGUAGE_SELECTOR_TIME_MS = 1 * 60 * 1000;
