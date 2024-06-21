@@ -24,7 +24,7 @@ export type ScreenName =
   | "scelta-girella" // pagina 13
   | "scelta-crostata" // pagina 14
   | "vedi-info"
-  | "vedi_preview";
+  | "vedi-preview";
 
 export type Screen = {
   screenName: ScreenName;

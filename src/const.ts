@@ -162,8 +162,8 @@ export const MapScreens: MappingScreens = {
       label: "",
     },
   },
-  vedi_preview: {
-    screenName: "vedi_preview",
+  "vedi-preview": {
+    screenName: "vedi-preview",
     color: "var(--orange-color)",
     showHomeIcon: true,
     title: "",

@@ -16,11 +16,11 @@
 
 .labelGlutenFee {
     color: var(--label-gluten-free-color);
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 .labelFattoAMano {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: var(--green-color);
 }
 

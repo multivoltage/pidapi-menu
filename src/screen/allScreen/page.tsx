@@ -104,6 +104,14 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
       <Show when={props.screen.screenName === "scelta-piada"}>
         <div>
           <div
+            class={styles.bigTitle}
+            style={{
+              color: props.screen.color,
+            }}
+          >
+            {t("piada_farcita")}
+          </div>
+          <div
             style={{
               "font-size": "2rem",
             }}
@@ -125,7 +133,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               style={{
                 position: "absolute",
                 left: "5%",
-                top: "50%",
+                top: "42%",
                 transform: "translateY(-50%)",
               }}
             >
@@ -164,7 +172,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
                 position: "absolute",
                 left: "50%",
                 transform: "translateX(-50%)",
-                bottom: 0,
+                bottom: "15%",
               }}
             >
               <Banner
@@ -183,7 +191,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
               style={{
                 position: "absolute",
                 right: "5%",
-                top: "50%",
+                top: "42%",
                 transform: "translateY(-50%)",
               }}
             >
@@ -470,6 +478,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
       </Show>
 
       <Show when={props.screen.screenName === "vedi-info"}>
+        <span class={styles.bigTitle}>{t("our_products")}</span>
         <div
           style={{
             display: "flex",

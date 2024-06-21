@@ -10,37 +10,55 @@ interface Props {
 }
 
 export const LabelGluenFree: Component<Props> = (props) => {
-  const { myStore } = useMyStore();
+  const { myStore, setScreen } = useMyStore();
   const { t } = useTranslation();
 
   return (
     <>
       <div class="lampeggio">
         <Show when={props.showAllLabelGlutenFree}>
-          <span class={styles.labelGlutenFee}>
-            {t("header_senza_glutine", "it")}
-          </span>
-          <span class={styles.labelGlutenFee}>{" - "}</span>
-          <span class={styles.labelGlutenFee}>
-            {t("header_senza_glutine", "en")}
-          </span>
+          <div>
+            <span class={styles.labelGlutenFee}>
+              {t("header_senza_glutine", "it")} -{" "}
+              {t("header_senza_glutine", "en")}
+            </span>
+          </div>
+          <div class={styles.labelFattoAMano}>{t("header_fatto_a_mano")}</div>
         </Show>
 
         <Show when={!props.showAllLabelGlutenFree}>
-          <Show when={myStore().lang === "it"}>
-            <span class={styles.labelGlutenFee}>
-              {t("header_senza_glutine")}
-            </span>
-          </Show>
-          <Show when={myStore().lang === "en"}>
-            <span class={styles.labelGlutenFee}>
-              {t("header_senza_glutine")}
-            </span>
-          </Show>
+          <div>
+            <Show when={myStore().lang === "it"}>
+              <div
+                class={styles.labelGlutenFee}
+                onClick={() => setScreen(MapScreens["vedi-info"])}
+              >
+                {t("header_senza_glutine")} - ({t("vedi_info")})
+              </div>
+              <div
+                class={styles.labelFattoAMano}
+                onClick={() => setScreen(MapScreens["vedi-preview"])}
+              >
+                {t("header_fatto_a_mano")} - ({t("vedi_preview")})
+              </div>
+            </Show>
+            <Show when={myStore().lang === "en"}>
+              <div
+                class={styles.labelGlutenFee}
+                onClick={() => setScreen(MapScreens["vedi-info"])}
+              >
+                {t("header_senza_glutine")} ({t("vedi_info")})
+              </div>
+              <div
+                class={styles.labelFattoAMano}
+                onClick={() => setScreen(MapScreens["vedi-preview"])}
+              >
+                {t("header_fatto_a_mano")} - ({t("vedi_preview")})
+              </div>
+            </Show>
+          </div>
+          <div></div>
         </Show>
-      </div>
-      <div class={`lampeggio ${styles["labelFattoAMano"]}`}>
-        {t("header_fatto_a_mano")}
       </div>
     </>
   );

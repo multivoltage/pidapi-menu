@@ -110,17 +110,6 @@ const Header: Component<Props> = (props) => {
       >
         <LabelGluenFree showAllLabelGlutenFree={props.showAllLabelGlutenFree} />
       </div>
-
-      <Show when={myStore().screen.screenName !== "langage-screen"}>
-        <div class={styles["actions"]}>
-          <div onClick={() => setScreen(MapScreens["vedi-info"])}>
-            {t("vedi_info")}
-          </div>
-          <div onClick={() => setScreen(MapScreens["vedi_preview"])}>
-            {t("vedi_preview")}
-          </div>
-        </div>
-      </Show>
     </header>
   );
 };
