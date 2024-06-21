@@ -474,6 +474,8 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
           style={{
             display: "flex",
             "flex-direction": "column",
+            "justify-content": "center",
+            "align-items": "center",
             gap: "3rem",
             margin: "3rem",
           }}
@@ -482,7 +484,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             style={{
               "border-radius": "2rem",
             }}
-            width="100%"
+            width="70%"
             height={"auto"}
             src="/images/logo_senza_glutine_della_monica.jpg"
           />
@@ -490,7 +492,7 @@ export const AllScrren: Component<{ screen: MyStore["screen"] }> = (props) => {
             style={{
               "border-radius": "2rem",
             }}
-            width="100%"
+            width="70%"
             src="/images/qrcode.jpg"
           />
         </div>
