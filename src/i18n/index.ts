@@ -49,6 +49,8 @@ const dictionary: LabelsDictionary = {
     nutella: "NUTELLA",
     piade_dolci: "PIADE DOLCI",
     marmellata_pere: "MARMELLATA DI PERE",
+    vedi_info: "VEDI INFO",
+    vedi_preview: "VEDI PREVIEW",
   },
   en: {
     header_senza_glutine: "ALL GLUTEN FREE",
@@ -89,6 +91,8 @@ const dictionary: LabelsDictionary = {
     nutella: "NUTELLA",
     piade_dolci: "SWEET PIADINA",
     marmellata_pere: "PEAR JAM",
+    vedi_info: "VIEW INFO",
+    vedi_preview: "VIEW PREVIEW",
   },
 };
 

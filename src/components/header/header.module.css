@@ -11,15 +11,17 @@
   align-items: center;
   height: var(--header-height);
   flex-wrap: wrap;
+  position: relative;
 }
 
 .labelGlutenFee {
     color: var(--label-gluten-free-color);
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 .labelFattoAMano {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
+  color: var(--green-color);
 }
 
 .navigationButton {
@@ -35,4 +37,12 @@ img.nextArrow {
 
 .labelNext {
   font-size: 2rem;
+}
+
+.actions {
+  position: absolute;
+  text-decoration: underline;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
 }

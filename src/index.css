@@ -20,8 +20,8 @@ code {
 
 /** variable **/
 :root {
-  --header-height: 15vh;
-  --content-height: 85vh;
+  --header-height: 18vh;
+  --content-height: 82vh;
   --green-color: rgb(176, 255, 1);
   --red-color: rgb(163,0,0);
   --orange-color: rgb(237,105,45);
