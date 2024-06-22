@@ -51,14 +51,14 @@ const dictionary: LabelsDictionary = {
     marmellata_pere: "MARMELLATA DI PERE",
     vedi_info: "vedi info",
     vedi_preview: "vedi video",
-    our_products: "I nostri prodotti sono fatti da:",
+    our_products: "Prodotti da:",
   },
   en: {
     header_senza_glutine: "ALL GLUTEN FREE",
     header_fatto_a_mano: "ALL HANDMADE",
     piada_piccola: "1 TASTE - 5€",
-    piada_media: "2 TASTES - 5€",
-    piada_grande: "3 TASTES - 5€",
+    piada_media: "2 TASTES - 6€",
+    piada_grande: "3 TASTES - 7€",
     affettati: "COLD CUTS",
     verdure: "VEGETABLES",
     formaggi: "CHEESES",
@@ -94,7 +94,7 @@ const dictionary: LabelsDictionary = {
     marmellata_pere: "PEAR JAM",
     vedi_info: "view info",
     vedi_preview: "view video",
-    our_products: "Our products come from:",
+    our_products: "Made by:",
   },
 };
 

@@ -140,6 +140,7 @@ export const Banner: Component<Props> = (props) => {
               position: "absolute",
               top: "-55%",
               left: 0,
+              "pointer-events": "none",
             }}
           ></canvas>
         </div>

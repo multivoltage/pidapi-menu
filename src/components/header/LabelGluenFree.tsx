@@ -33,13 +33,13 @@ export const LabelGluenFree: Component<Props> = (props) => {
                 class={styles.labelGlutenFee}
                 onClick={() => setScreen(MapScreens["vedi-info"])}
               >
-                {t("header_senza_glutine")} - ({t("vedi_info")})
+                {t("header_senza_glutine")} ({t("vedi_info")})
               </div>
               <div
                 class={styles.labelFattoAMano}
-                onClick={() => setScreen(MapScreens["vedi-preview"])}
+                // onClick={() => setScreen(MapScreens["vedi-preview"])}
               >
-                {t("header_fatto_a_mano")} - ({t("vedi_preview")})
+                {t("header_fatto_a_mano")}
               </div>
             </Show>
             <Show when={myStore().lang === "en"}>
@@ -51,9 +51,9 @@ export const LabelGluenFree: Component<Props> = (props) => {
               </div>
               <div
                 class={styles.labelFattoAMano}
-                onClick={() => setScreen(MapScreens["vedi-preview"])}
+                // onClick={() => setScreen(MapScreens["vedi-preview"])}
               >
-                {t("header_fatto_a_mano")} - ({t("vedi_preview")})
+                {t("header_fatto_a_mano")}
               </div>
             </Show>
           </div>
