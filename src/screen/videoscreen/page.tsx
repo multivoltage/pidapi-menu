@@ -13,6 +13,7 @@ const Screen: Component = () => {
       autoplay
       class={styles.container}
       onClick={[setScreen, MapScreens.home]}
+      loop
     >
       <source src="/video/screensaver.mp4" type="video/mp4" />
     </video>
