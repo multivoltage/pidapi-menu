@@ -14,7 +14,7 @@ export default defineConfig({
     VitePWA({
       workbox: {
         globPatterns: [
-          "**/*.{js,css,html,ico,jpg,png,svg,webp,mp3,webmanifest}",
+          "**/*.{js,css,html,ico,jpg,png,svg,webp,mp3,mp4,webmanifest}",
         ],
       },
       manifest: {
@@ -26,6 +26,7 @@ export default defineConfig({
         "images/*.jpg",
         "images/*.webp",
         "audio/*.mp3",
+        "video/*.mp4",
       ],
     }),
   ],

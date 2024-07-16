@@ -8,6 +8,7 @@ export type Asset = {
 export type Lang = "it" | "en";
 
 export type ScreenName =
+  | "screensaver"
   | "langage-screen"
   | "home" // pagina 4
   //

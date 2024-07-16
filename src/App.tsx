@@ -6,6 +6,7 @@ import styles from "./App.module.css";
 import ScreenLangSelector from "./screen/selectLangageScreen/page";
 import Header from "./components/header";
 import { AllScrren } from "./screen/allScreen/page";
+import VideoPage from "./screen/videoscreen/page";
 import { MapScreens, RESET_TO_LANGUAGE_SELECTOR_TIME_MS } from "./const";
 import { useMyStore } from "./StoreProvider";
 
@@ -34,8 +35,7 @@ const App: Component = () => {
   const { restart } = createTimer(
     import.meta.env.PROD ? RESET_TO_LANGUAGE_SELECTOR_TIME_MS : 99999999,
     () => {
-      console.log("xxx go language");
-      setScreen(MapScreens["langage-screen"]);
+      setScreen(MapScreens["screensaver"]);
     }
   );
 
@@ -45,12 +45,19 @@ const App: Component = () => {
 
   return (
     <div class={styles.App} on:touchstart={restart}>
-      <Header
-        showAllLabelGlutenFree={
-          myStore().screen.screenName === "langage-screen"
-        }
-        showHome={false}
-      />
+      <Show when={myStore().screen.screenName !== "screensaver"}>
+        <Header
+          showAllLabelGlutenFree={
+            myStore().screen.screenName === "langage-screen"
+          }
+          showHome={false}
+        />
+      </Show>
+
+      <Show when={myStore().screen.screenName === "screensaver"}>
+        <VideoPage />
+      </Show>
+
       <Show when={myStore().screen.screenName === "langage-screen"}>
         <ScreenLangSelector />
       </Show>

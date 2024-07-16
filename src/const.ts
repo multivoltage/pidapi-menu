@@ -2,6 +2,12 @@ import { MappingScreens } from "./types";
 import { Props as AlternateListProps } from "./components/AlternateList";
 
 export const MapScreens: MappingScreens = {
+  screensaver: {
+    screenName: "screensaver",
+    color: "white",
+    showHomeIcon: false,
+    title: "",
+  },
   "langage-screen": {
     screenName: "langage-screen",
     color: "white",
